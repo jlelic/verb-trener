@@ -2,6 +2,7 @@ import styles from '../styles/Home.module.css'
 import {useState} from 'react'
 import {generateTest} from './api/test-generator'
 import Head from 'next/head'
+import Link from 'next/link'
 
 export async function getServerSideProps(context) {
     return {
@@ -21,9 +22,14 @@ export default function Test(props) {
 
     if(questionNum == test.numQuestions) {
         return <div className={styles.container}>
-            <h1>Finished</h1>
             <main className={styles.main}>
+                <h1>Finished</h1>
                 Correct: {correctNum/2} / {test.numQuestions}
+                <Link href="/">
+                    <a  className={styles.card}>
+                        <p>Go back</p>
+                    </a>
+                </Link>
             </main>
         </div>
     }
@@ -38,7 +44,7 @@ export default function Test(props) {
                 {questionNum}/{test.numQuestions}
             </p>
             <p>
-                What is {phaseName} of
+                What is <strong>{phaseName}</strong> of
             </p>
             <h1 className={styles.title}>
                 {test.questions[questionNum].verb.infinitiv}

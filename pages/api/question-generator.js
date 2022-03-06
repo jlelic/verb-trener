@@ -13,7 +13,9 @@ const generateQuestions = (verbs) => verbs.map((verb) => {
     const picked = pickInflections(inflId)
     const preteritumOptions = shuffle(picked
         .map(iId => {
-            console.log(iId)
+            if(!InflectionGenerator[iId]) {
+                console.log('**************', iId)
+            }
             return ({
             inflId: iId,
             correct: iId == inflId,

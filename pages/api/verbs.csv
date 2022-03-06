@@ -524,7 +524,7 @@ A42473nb,opphøye,opphøyer,opphøya,opphøya,P001nb
 A42473nb,opphøye,opphøyer,opphøyet,opphøyet,P010nb
 A42473nb,opphøye,opphøyer,opphøyde,opphøyd,P030nb
 A10166nb,dimme,dimmer,dimma,dimma,P002nb
-A10166nb,dimme,dimmer,dimmet,dimmet,P012nb
+A10166nb,dimme,dimmer,dimmet,dimmet,P010nb
 A63327nb,tyvlåne,tyvlåner,tyvlånte,tyvlånt,P020nb
 A63327nb,tjuvlåne,tjuvlåner,tjuvlånte,tjuvlånt,P020nb
 A27560nb,jatte,jatter,jatta,jatta,P001nb
@@ -543,7 +543,7 @@ A47325nb,rake,raker,raket,raket,P010nb
 A60988nb,tiltenke,tiltenker,tiltenkte,tiltenkt,P020nb
 A3207nb,auksjonere,auksjonerer,auksjonerte,auksjonert,P020nb
 A20842nb,gremme,gremmer,gremma,gremma,P002nb
-A20842nb,gremme,gremmer,gremmet,gremmet,P012nb
+A20842nb,gremme,gremmer,gremmet,gremmet,P010nb
 A20842nb,gremme,gremmer,gremte,gremt,P022nb
 A100413nb,kontemplere,kontemplerer,kontemplerte,kontemplert,P020nb
 A57875nb,stue,stuer,stua,stua,P001nb
@@ -618,7 +618,7 @@ A53452nb,skotte,skotter,skottet,skottet,P010nb
 A32513nb,krøsse,krøsser,krøssa,krøssa,P001nb
 A32513nb,krøsse,krøsser,krøsset,krøsset,P010nb
 A32352nb,krumme,krummer,krumma,krumma,P002nb
-A32352nb,krumme,krummer,krummet,krummet,P012nb
+A32352nb,krumme,krummer,krummet,krummet,P010nb
 A65611nb,utplassere,utplasserer,utplasserte,utplassert,P020nb
 A92nb,abstrahere,abstraherer,abstraherte,abstrahert,P020nb
 A25846nb,illustrere,illustrerer,illustrerte,illustrert,P020nb
@@ -924,10 +924,10 @@ A39370nb,movere,moverer,moverte,movert,P020nb
 A3380nb,avblåse,avblåser,avblåste,avblåst,P020nb
 A43992nb,panele,paneler,panelte,panelt,P020nb
 A66490nb,vannkjemme,vannkjemmer,vannkjemma,vannkjemma,P002nb
-A66490nb,vannkjemme,vannkjemmer,vannkjemmet,vannkjemmet,P012nb
+A66490nb,vannkjemme,vannkjemmer,vannkjemmet,vannkjemmet,P010nb
 A66490nb,vannkjemme,vannkjemmer,vannkjemte,vannkjemt,P022nb
 A66490nb,vasskjemme,vasskjemmer,vasskjemma,vasskjemma,P002nb
-A66490nb,vasskjemme,vasskjemmer,vasskjemmet,vasskjemmet,P012nb
+A66490nb,vasskjemme,vasskjemmer,vasskjemmet,vasskjemmet,P010nb
 A66490nb,vasskjemme,vasskjemmer,vasskjemte,vasskjemt,P022nb
 A56701nb,staple,stapler,stapla,stapla,P001nb
 A56701nb,staple,stapler,staplet,staplet,P010nb
@@ -964,8 +964,8 @@ A29527nb,kjenne,kjenner,kjente,kjent,P021nb
 A16458nb,forlange,forlanger,forlangte,forlangt,P020nb
 A17662nb,fraternisere,fraterniserer,fraterniserte,fraternisert,P020nb
 A15459nb,flomme,flommer,flomma,flomma,P002nb
-A15459nb,flomme,flommer,flommet,flommet,P012nb
-A15459nb,flømme,flømmer,flømmet,flømmet,P012nb
+A15459nb,flomme,flommer,flommet,flommet,P010nb
+A15459nb,flømme,flømmer,flømmet,flømmet,P010nb
 A15459nb,flømme,flømmer,flømte,flømt,P022nb
 A59079nb,synkopere,synkoperer,synkoperte,synkopert,P020nb
 A63745nb,udødeliggjøre,udødeliggjør,udødeliggjorde,udødeliggjort,P126nb
@@ -1009,7 +1009,7 @@ A45424nb,pole,poler,polte,polt,P020nb
 A44933nb,pilke,pilker,pilka,pilka,P001nb
 A44933nb,pilke,pilker,pilket,pilket,P010nb
 A53825nb,skumme,skummer,skumma,skumma,P002nb
-A53825nb,skumme,skummer,skummet,skummet,P012nb
+A53825nb,skumme,skummer,skummet,skummet,P010nb
 A47237nb,radiere,radierer,radierte,radiert,P020nb
 A56491nb,spyle,spyler,spylte,spylt,P020nb
 A9879nb,desorientere,desorienterer,desorienterte,desorientert,P020nb
@@ -1188,7 +1188,7 @@ A99177nb,nedbetale,nedbetaler,nedbetalte,nedbetalt,P020nb
 A6781nb,bogne,bogner,bogna,bogna,P001nb
 A6781nb,bogne,bogner,bognet,bognet,P010nb
 A11145nb,dumme,dummer,dumma,dumma,P002nb
-A11145nb,dumme,dummer,dummet,dummet,P012nb
+A11145nb,dumme,dummer,dummet,dummet,P010nb
 A30497nb,kneppe,knepper,kneppet,kneppet,P010nb
 A30497nb,kneppe,knepper,knepte,knept,P021nb
 A3459nb,avføde,avføder,avfødte,avfødt,P020nb
@@ -1199,7 +1199,7 @@ A65855nb,utstyre,utstyrer,utstyrte,utstyrt,P020nb
 A19470nb,genierklære,genierklærer,genierklærte,genierklært,P020nb
 A26495nb,innkalle,innkaller,innkalte,innkalt,P021nb
 A7734nb,brumme,brummer,brumma,brumma,P002nb
-A7734nb,brumme,brummer,brummet,brummet,P012nb
+A7734nb,brumme,brummer,brummet,brummet,P010nb
 A5581nb,besvangre,besvangrer,besvangra,besvangra,P001nb
 A5581nb,besvangre,besvangrer,besvangret,besvangret,P010nb
 A40960nb,nominere,nominerer,nominerte,nominert,P020nb
@@ -1209,7 +1209,7 @@ A60114nb,tekste,tekster,tekstet,tekstet,P010nb
 A37428nb,matte,matter,matta,matta,P001nb
 A37428nb,matte,matter,mattet,mattet,P010nb
 A16645nb,fornemme,fornemmer,fornemma,fornemma,P002nb
-A16645nb,fornemme,fornemmer,fornemmet,fornemmet,P012nb
+A16645nb,fornemme,fornemmer,fornemmet,fornemmet,P010nb
 A65961nb,utvide,utvider,utvida,utvida,P001nb
 A65961nb,utvide,utvider,utvidet,utvidet,P010nb
 A21992nb,halse,halser,halsa,halsa,P001nb
@@ -1281,7 +1281,7 @@ A16169nb,forenkle,forenkler,forenklet,forenklet,P010nb
 A48130nb,renovere,renoverer,renoverte,renovert,P020nb
 A63076nb,tvedele,tvedeler,tvedelte,tvedelt,P020nb
 A26555nb,innlemme,innlemmer,innlemma,innlemma,P002nb
-A26555nb,innlemme,innlemmer,innlemmet,innlemmet,P012nb
+A26555nb,innlemme,innlemmer,innlemmet,innlemmet,P010nb
 A97141nb,ettervise,etterviser,etterviste,ettervist,P020nb
 A42580nb,oppnorske,oppnorsker,oppnorska,oppnorska,P001nb
 A42580nb,oppnorske,oppnorsker,oppnorsket,oppnorsket,P010nb
@@ -1690,7 +1690,7 @@ A22038nb,halve,halver,halva,halva,P001nb
 A22038nb,halve,halver,halvet,halvet,P010nb
 A13076nb,erstatte,erstatter,erstatta,erstatta,P001nb
 A13076nb,erstatte,erstatter,erstattet,erstattet,P010nb
-A56970nb,stemme,stemmer,stemmet,stemmet,P012nb
+A56970nb,stemme,stemmer,stemmet,stemmet,P010nb
 A56970nb,stemme,stemmer,stemte,stemt,P022nb
 A60600nb,tidoble,tidobler,tidobla,tidobla,P001nb
 A60600nb,tidoble,tidobler,tidoblet,tidoblet,P010nb
@@ -2165,7 +2165,7 @@ A33260nb,kvisle,kvisler,kvislet,kvislet,P010nb
 A38347nb,mikse,mikser,miksa,miksa,P001nb
 A38347nb,mikse,mikser,mikset,mikset,P010nb
 A43067nb,oppstamme,oppstammer,oppstamma,oppstamma,P002nb
-A43067nb,oppstamme,oppstammer,oppstammet,oppstammet,P012nb
+A43067nb,oppstamme,oppstammer,oppstammet,oppstammet,P010nb
 A14408nb,ferje,ferjer,ferja,ferja,P001nb
 A14408nb,ferje,ferjer,ferjet,ferjet,P010nb
 A14408nb,ferge,ferger,ferga,ferga,P001nb
@@ -2201,7 +2201,7 @@ A20285nb,glitre,glitrer,glitret,glitret,P010nb
 A34820nb,lene,lener,lenet,lenet,P010nb
 A34820nb,lene,lener,lente,lent,P020nb
 A14748nb,finkjemme,finkjemmer,finkjemma,finkjemma,P002nb
-A14748nb,finkjemme,finkjemmer,finkjemmet,finkjemmet,P012nb
+A14748nb,finkjemme,finkjemmer,finkjemmet,finkjemmet,P010nb
 A14748nb,finkjemme,finkjemmer,finkjemte,finkjemt,P022nb
 A66874nb,vasse,vasser,vassa,vassa,P001nb
 A66874nb,vasse,vasser,vasset,vasset,P010nb
@@ -2340,7 +2340,7 @@ A53486nb,skralle,skraller,skrallet,skrallet,P010nb
 A40750nb,nevehilse,nevehilser,nevehilste,nevehilst,P020nb
 A31062nb,komplisere,kompliserer,kompliserte,komplisert,P020nb
 A27493nb,jamme,jammer,jamma,jamma,P002nb
-A27493nb,jamme,jammer,jammet,jammet,P012nb
+A27493nb,jamme,jammer,jammet,jammet,P010nb
 A25941nb,importere,importerer,importerte,importert,P020nb
 A65706nb,utsende,utsender,utsendte,utsendt,P020nb
 A16266nb,forgape,forgaper,forgapa,forgapa,P001nb
@@ -2845,7 +2845,7 @@ A36233nb,lye,lyer,lya,lya,P001nb
 A36233nb,lye,lyer,lyet,lyet,P010nb
 A36233nb,lye,lyer,lydde,lydd,P043nb
 A47369nb,ramme,rammer,ramma,ramma,P002nb
-A47369nb,ramme,rammer,rammet,rammet,P012nb
+A47369nb,ramme,rammer,rammet,rammet,P010nb
 A21881nb,hake,haker,haka,haka,P001nb
 A21881nb,hake,haker,haket,haket,P010nb
 A21881nb,hake,haker,hakte,hakt,P020nb
@@ -3126,7 +3126,7 @@ A97837nb,trigge,trigger,trigget,trigget,P010nb
 A43576nb,overfløye,overfløyer,overfløyet,overfløyet,P010nb
 A43576nb,overfløye,overfløyer,overfløyde,overfløyd,P030nb
 A69025nb,vomere,vomerer,vomerte,vomert,P020nb
-A9693nb,demme,demmer,demmet,demmet,P012nb
+A9693nb,demme,demmer,demmet,demmet,P010nb
 A9693nb,demme,demmer,demte,demt,P022nb
 A54551nb,sludre,sludrer,sludra,sludra,P001nb
 A54551nb,sludre,sludrer,sludret,sludret,P010nb
@@ -3157,7 +3157,7 @@ A50234nb,satisfisere,satisfiserer,satisfiserte,satisfisert,P020nb
 A64126nb,ulne,ulner,ulna,ulna,P001nb
 A64126nb,ulne,ulner,ulnet,ulnet,P010nb
 A1964nb,annamme,annammer,annamma,annamma,P002nb
-A1964nb,annamme,annammer,annammet,annammet,P012nb
+A1964nb,annamme,annammer,annammet,annammet,P010nb
 A1294nb,ættlede,ættleder,ættleda,ættleda,P001nb
 A1294nb,ættlede,ættleder,ættledet,ættledet,P010nb
 A19893nb,gjenreise,gjenreiser,gjenreiste,gjenreist,P020nb
@@ -3183,7 +3183,7 @@ A11247nb,duskregne,duskregner,duskregna,duskregna,P001nb
 A11247nb,duskregne,duskregner,duskregnet,duskregnet,P010nb
 A11247nb,duskregne,duskregner,duskregnte,duskregnt,P020nb
 A40550nb,nedstamme,nedstammer,nedstamma,nedstamma,P002nb
-A40550nb,nedstamme,nedstammer,nedstammet,nedstammet,P012nb
+A40550nb,nedstamme,nedstammer,nedstammet,nedstammet,P010nb
 A69261nb,væte,væter,vætet,vætet,P010nb
 A69261nb,væte,væter,vætte,vætt,P020nb
 A65315nb,utforske,utforsker,utforska,utforska,P001nb
@@ -3755,11 +3755,11 @@ A42161nb,ommøblere,ommøblerer,ommøblerte,ommøblert,P020nb
 A30397nb,knabbe,knabber,knabba,knabba,P001nb
 A30397nb,knabbe,knabber,knabbet,knabbet,P010nb
 A54246nb,slamme,slammer,slamma,slamma,P002nb
-A54246nb,slamme,slammer,slammet,slammet,P012nb
+A54246nb,slamme,slammer,slammet,slammet,P010nb
 A17209nb,forurette,foruretter,foruretta,foruretta,P001nb
 A17209nb,forurette,foruretter,forurettet,forurettet,P010nb
 A33621nb,lamme,lammer,lamma,lamma,P002nb
-A33621nb,lamme,lammer,lammet,lammet,P012nb
+A33621nb,lamme,lammer,lammet,lammet,P010nb
 A43659nb,overlaste,overlaster,overlasta,overlasta,P001nb
 A43659nb,overlaste,overlaster,overlastet,overlastet,P010nb
 A47944nb,rekapitulere,rekapitulerer,rekapitulerte,rekapitulert,P020nb
@@ -3808,7 +3808,7 @@ A66804nb,vase,vaser,vaste,vast,P020nb
 A47094nb,pålegge,pålegger,påla,pålagt,P104nb
 A61689nb,tradere,traderer,traderte,tradert,P020nb
 A5145nb,bekvemme,bekvemmer,bekvemma,bekvemma,P002nb
-A5145nb,bekvemme,bekvemmer,bekvemmet,bekvemmet,P012nb
+A5145nb,bekvemme,bekvemmer,bekvemmet,bekvemmet,P010nb
 A16079nb,fordriste,fordrister,fordrista,fordrista,P001nb
 A16079nb,fordriste,fordrister,fordristet,fordristet,P010nb
 A61932nb,trassere,trasserer,trasserte,trassert,P020nb
@@ -4023,7 +4023,7 @@ A42176nb,omprøve,omprøver,omprøvde,omprøvd,P030nb
 A42416nb,oppfostre,oppfostrer,oppfostra,oppfostra,P001nb
 A42416nb,oppfostre,oppfostrer,oppfostret,oppfostret,P010nb
 A15214nb,flamme,flammer,flamma,flamma,P002nb
-A15214nb,flamme,flammer,flammet,flammet,P012nb
+A15214nb,flamme,flammer,flammet,flammet,P010nb
 A27920nb,jubilere,jubilerer,jubilerte,jubilert,P020nb
 A33944nb,laste,laster,lasta,lasta,P001nb
 A33944nb,laste,laster,lastet,lastet,P010nb
@@ -4186,7 +4186,7 @@ A13493nb,evne,evner,evna,evna,P001nb
 A13493nb,evne,evner,evnet,evnet,P010nb
 A17653nb,fraskille,fraskiller,fraskilte,fraskilt,P021nb
 A16441nb,forkromme,forkrommer,forkromma,forkromma,P002nb
-A16441nb,forkromme,forkrommer,forkrommet,forkrommet,P012nb
+A16441nb,forkromme,forkrommer,forkrommet,forkrommet,P010nb
 A16546nb,formaste,formaster,formasta,formasta,P001nb
 A16546nb,formaste,formaster,formastet,formastet,P010nb
 A17313nb,fosse,fosser,fossa,fossa,P001nb
@@ -4214,11 +4214,11 @@ A61884nb,transportere,transporterer,transporterte,transportert,P020nb
 A29284nb,kinke,kinker,kinka,kinka,P001nb
 A29284nb,kinke,kinker,kinket,kinket,P010nb
 A48842nb,romme,rommer,romma,romma,P002nb
-A48842nb,romme,rommer,rommet,rommet,P012nb
+A48842nb,romme,rommer,rommet,rommet,P010nb
 A45150nb,plante,planter,planta,planta,P001nb
 A45150nb,plante,planter,plantet,plantet,P010nb
 A7253nb,bramme,brammer,bramma,bramma,P002nb
-A7253nb,bramme,brammer,brammet,brammet,P012nb
+A7253nb,bramme,brammer,brammet,brammet,P010nb
 A68350nb,vill-lede,vill-leder,vill-leda,vill-leda,P001nb
 A68350nb,vill-lede,vill-leder,vill-ledet,vill-ledet,P010nb
 A68350nb,villede,villeder,villeda,villeda,P001nb
@@ -4228,7 +4228,7 @@ A68350nb,vill-leie,vill-leier,vill-leide,vill-leid,P030nb
 A33933nb,laske,lasker,laska,laska,P001nb
 A33933nb,laske,lasker,lasket,lasket,P010nb
 A6933nb,bomme,bommer,bomma,bomma,P002nb
-A6933nb,bomme,bommer,bommet,bommet,P012nb
+A6933nb,bomme,bommer,bommet,bommet,P010nb
 A20393nb,gnisle,gnisler,gnisla,gnisla,P001nb
 A20393nb,gnisle,gnisler,gnislet,gnislet,P010nb
 A58229nb,subtrahere,subtraherer,subtraherte,subtrahert,P020nb
@@ -4253,7 +4253,7 @@ A48168nb,reparere,reparerer,reparerte,reparert,P020nb
 A52451nb,skamfere,skamferer,skamferte,skamfert,P020nb
 A9778nb,deprimere,deprimerer,deprimerte,deprimert,P020nb
 A26713nb,innstramme,innstrammer,innstramma,innstramma,P002nb
-A26713nb,innstramme,innstrammer,innstrammet,innstrammet,P012nb
+A26713nb,innstramme,innstrammer,innstrammet,innstrammet,P010nb
 A55029nb,snake,snaker,snaka,snaka,P001nb
 A55029nb,snake,snaker,snaket,snaket,P010nb
 A55029nb,snake,snaker,snakte,snakt,P020nb
@@ -4377,7 +4377,7 @@ A53958nb,skygge,skygger,skygga,skygga,P001nb
 A53958nb,skygge,skygger,skygget,skygget,P010nb
 A53958nb,skygge,skygger,skygde,skygd,P031nb
 A62276nb,trimme,trimmer,trimma,trimma,P002nb
-A62276nb,trimme,trimmer,trimmet,trimmet,P012nb
+A62276nb,trimme,trimmer,trimmet,trimmet,P010nb
 A9763nb,deponere,deponerer,deponerte,deponert,P020nb
 A40180nb,nasalere,nasalerer,nasalerte,nasalert,P020nb
 A47464nb,rappe,rapper,rappa,rappa,P001nb
@@ -4544,7 +4544,7 @@ A67482nb,velle,veller,velte,velt,P021nb
 A38004nb,merke,merker,merka,merka,P001nb
 A38004nb,merke,merker,merket,merket,P010nb
 A47367nb,ramme,rammer,ramma,ramma,P002nb
-A47367nb,ramme,rammer,rammet,rammet,P012nb
+A47367nb,ramme,rammer,rammet,rammet,P010nb
 A15292nb,flattere,flatterer,flatterte,flattert,P020nb
 A10951nb,drodle,drodler,drodla,drodla,P001nb
 A10951nb,drodle,drodler,drodlet,drodlet,P010nb
@@ -4641,7 +4641,7 @@ A57772nb,strype,stryper,strypte,strypt,P020nb
 A44357nb,passe,passer,passa,passa,P001nb
 A44357nb,passe,passer,passet,passet,P010nb
 A52811nb,skinne,skinner,skinte,skint,P021nb
-A40464nb,neddemme,neddemmer,neddemmet,neddemmet,P012nb
+A40464nb,neddemme,neddemmer,neddemmet,neddemmet,P010nb
 A40464nb,neddemme,neddemmer,neddemte,neddemt,P022nb
 A53904nb,skvadronere,skvadronerer,skvadronerte,skvadronert,P020nb
 A30852nb,kollsegle,kollsegler,kollsegla,kollsegla,P001nb
@@ -4673,7 +4673,7 @@ A13615nb,fakke,fakker,fakket,fakket,P010nb
 A43866nb,padle,padler,padla,padla,P001nb
 A43866nb,padle,padler,padlet,padlet,P010nb
 A58344nb,summe,summer,summa,summa,P002nb
-A58344nb,summe,summer,summet,summet,P012nb
+A58344nb,summe,summer,summet,summet,P010nb
 A38094nb,mestre,mestrer,mestra,mestra,P001nb
 A38094nb,mestre,mestrer,mestret,mestret,P010nb
 A42640nb,øde,øder,ødet,ødet,P010nb
@@ -4842,7 +4842,7 @@ A1880nb,anke,anker,anka,anka,P001nb
 A1880nb,anke,anker,anket,anket,P010nb
 A51924nb,sjenere,sjenerer,sjenerte,sjenert,P020nb
 A52466nb,skamme,skammer,skamma,skamma,P002nb
-A52466nb,skamme,skammer,skammet,skammet,P012nb
+A52466nb,skamme,skammer,skammet,skammet,P010nb
 A52677nb,skeine,skeiner,skeinte,skeint,P020nb
 A32906nb,kuske,kusker,kuska,kuska,P001nb
 A32906nb,kuske,kusker,kusket,kusket,P010nb
@@ -4898,7 +4898,7 @@ A62894nb,tuppe,tupper,tuppet,tuppet,P010nb
 A50030nb,samsvare,samsvarer,samsvarte,samsvart,P020nb
 A61010nb,tilvise,tilviser,tilviste,tilvist,P020nb
 A10165nb,dimme,dimmer,dimma,dimma,P002nb
-A10165nb,dimme,dimmer,dimmet,dimmet,P012nb
+A10165nb,dimme,dimmer,dimmet,dimmet,P010nb
 A35146nb,like,liker,likte,likt,P020nb
 A41309nb,nydanne,nydanner,nydanna,nydanna,P001nb
 A41309nb,nydanne,nydanner,nydannet,nydannet,P010nb
@@ -5154,7 +5154,7 @@ A38532nb,minne,minner,minte,mint,P021nb
 A45531nb,polymerisere,polymeriserer,polymeriserte,polymerisert,P020nb
 A61708nb,trafikkere,trafikkerer,trafikkerte,trafikkert,P020nb
 A20189nb,glattkjemme,glattkjemmer,glattkjemma,glattkjemma,P002nb
-A20189nb,glattkjemme,glattkjemmer,glattkjemmet,glattkjemmet,P012nb
+A20189nb,glattkjemme,glattkjemmer,glattkjemmet,glattkjemmet,P010nb
 A20189nb,glattkjemme,glattkjemmer,glattkjemte,glattkjemt,P022nb
 A68297nb,vildre,vildrer,vildra,vildra,P001nb
 A68297nb,vildre,vildrer,vildret,vildret,P010nb
@@ -5225,7 +5225,7 @@ A62257nb,trikse,trikser,triksa,triksa,P001nb
 A62257nb,trikse,trikser,trikset,trikset,P010nb
 A31399nb,kontinuere,kontinuerer,kontinuerte,kontinuert,P020nb
 A6934nb,bomme,bommer,bomma,bomma,P002nb
-A6934nb,bomme,bommer,bommet,bommet,P012nb
+A6934nb,bomme,bommer,bommet,bommet,P010nb
 A32874nb,kursivere,kursiverer,kursiverte,kursivert,P020nb
 A32342nb,krukse,krukser,kruksa,kruksa,P001nb
 A32342nb,krukse,krukser,krukset,krukset,P010nb
@@ -5276,7 +5276,7 @@ A54758nb,smekte,smekter,smektet,smektet,P010nb
 A61282nb,tjåke,tjåker,tjåka,tjåka,P001nb
 A61282nb,tjåke,tjåker,tjåket,tjåket,P010nb
 A29501nb,kjemme,kjemmer,kjemma,kjemma,P002nb
-A29501nb,kjemme,kjemmer,kjemmet,kjemmet,P012nb
+A29501nb,kjemme,kjemmer,kjemmet,kjemmet,P010nb
 A29501nb,kjemme,kjemmer,kjemte,kjemt,P022nb
 A47765nb,refse,refser,refsa,refsa,P001nb
 A47765nb,refse,refser,refset,refset,P010nb
@@ -5721,7 +5721,7 @@ A4891nb,befeste,befester,befesta,befesta,P001nb
 A4891nb,befeste,befester,befestet,befestet,P010nb
 A37997nb,merittere,meritterer,meritterte,merittert,P020nb
 A57795nb,strømme,strømmer,strømma,strømma,P002nb
-A57795nb,strømme,strømmer,strømmet,strømmet,P012nb
+A57795nb,strømme,strømmer,strømmet,strømmet,P010nb
 A57795nb,strømme,strømmer,strømte,strømt,P022nb
 A18131nb,fritere,friterer,friterte,fritert,P020nb
 A32815nb,kuple,kupler,kupla,kupla,P001nb
@@ -5737,7 +5737,7 @@ A11263nb,dvele,dveler,dvelte,dvelt,P020nb
 A64599nb,unnfange,unnfanger,unnfanga,unnfanga,P001nb
 A64599nb,unnfange,unnfanger,unnfanget,unnfanget,P010nb
 A31917nb,kramme,krammer,kramma,kramma,P002nb
-A31917nb,kramme,krammer,krammet,krammet,P012nb
+A31917nb,kramme,krammer,krammet,krammet,P010nb
 A47912nb,reise,reiser,reiste,reist,P020nb
 A56394nb,sprite,spriter,sprita,sprita,P001nb
 A56394nb,sprite,spriter,spritet,spritet,P010nb
@@ -5949,7 +5949,7 @@ A23700nb,hive,hiver,hivde,hivd,P030nb
 A65824nb,utstede,utsteder,utstedte,utstedt,P020nb
 A57238nb,stimulere,stimulerer,stimulerte,stimulert,P020nb
 A24109nb,homme,hommer,homma,homma,P002nb
-A24109nb,homme,hommer,hommet,hommet,P012nb
+A24109nb,homme,hommer,hommet,hommet,P010nb
 A54249nb,slampe,slamper,slampa,slampa,P001nb
 A54249nb,slampe,slamper,slampet,slampet,P010nb
 A40514nb,nedmolde,nedmolder,nedmolda,nedmolda,P001nb
@@ -5962,7 +5962,7 @@ A10839nb,drible,dribler,driblet,driblet,P010nb
 A30259nb,klovne,klovner,klovna,klovna,P001nb
 A30259nb,klovne,klovner,klovnet,klovnet,P010nb
 A42177nb,omramme,omrammer,omramma,omramma,P002nb
-A42177nb,omramme,omrammer,omrammet,omrammet,P012nb
+A42177nb,omramme,omrammer,omrammet,omrammet,P010nb
 A63420nb,tørre,tørrer,tørra,tørra,P001nb
 A63420nb,tørre,tørrer,tørret,tørret,P010nb
 A66593nb,vanstelle,vansteller,vanstelte,vanstelt,P021nb
@@ -6032,7 +6032,7 @@ A64814nb,urfremføre,urfremfører,urfremførte,urfremført,P020nb
 A20754nb,gratulere,gratulerer,gratulerte,gratulert,P020nb
 A99833nb,inkriminere,inkriminerer,inkriminerte,inkriminert,P020nb
 A6353nb,blekke,blekker,blekka,blekka,P002nb
-A6353nb,blekke,blekker,blekket,blekket,P012nb
+A6353nb,blekke,blekker,blekket,blekket,P010nb
 A46330nb,problematisere,problematiserer,problematiserte,problematisert,P020nb
 A16446nb,forkvakle,forkvakler,forkvakla,forkvakla,P001nb
 A16446nb,forkvakle,forkvakler,forkvaklet,forkvaklet,P010nb
@@ -6502,7 +6502,7 @@ A52789nb,skimre,skimrer,skimret,skimret,P010nb
 A16036nb,fordampe,fordamper,fordampa,fordampa,P001nb
 A16036nb,fordampe,fordamper,fordampet,fordampet,P010nb
 A28442nb,kamme,kammer,kamma,kamma,P002nb
-A28442nb,kamme,kammer,kammet,kammet,P012nb
+A28442nb,kamme,kammer,kammet,kammet,P010nb
 A53832nb,skumpiske,skumpisker,skumpiska,skumpiska,P001nb
 A53832nb,skumpiske,skumpisker,skumpisket,skumpisket,P010nb
 A42664nb,øke,øker,øka,øka,P001nb
@@ -6816,7 +6816,7 @@ A65572nb,utmeisle,utmeisler,utmeisla,utmeisla,P001nb
 A65572nb,utmeisle,utmeisler,utmeislet,utmeislet,P010nb
 A63338nb,tø,tør,tødde,tødd,P040nb
 A16621nb,formumme,formummer,formumma,formumma,P002nb
-A16621nb,formumme,formummer,formummet,formummet,P012nb
+A16621nb,formumme,formummer,formummet,formummet,P010nb
 A5573nb,bestyrke,bestyrker,bestyrka,bestyrka,P001nb
 A5573nb,bestyrke,bestyrker,bestyrket,bestyrket,P010nb
 A19067nb,gante,ganter,ganta,ganta,P001nb
@@ -6903,7 +6903,7 @@ A13349nb,etterspore,ettersporer,etterspora,etterspora,P001nb
 A13349nb,etterspore,ettersporer,ettersporet,ettersporet,P010nb
 A13349nb,etterspore,ettersporer,ettersporte,ettersport,P020nb
 A99418nb,gymme,gymmer,gymma,gymma,P002nb
-A99418nb,gymme,gymmer,gymmet,gymmet,P012nb
+A99418nb,gymme,gymmer,gymmet,gymmet,P010nb
 A67010nb,vatre,vatrer,vatra,vatra,P001nb
 A67010nb,vatre,vatrer,vatret,vatret,P010nb
 A20419nb,gnusse,gnusser,gnussa,gnussa,P001nb
@@ -7093,7 +7093,7 @@ A97682nb,vokke,vokker,vokket,vokket,P010nb
 A32293nb,kronikkere,kronikkerer,kronikkerte,kronikkert,P020nb
 A15413nb,flire,flirer,flirte,flirt,P020nb
 A1525nb,amme,ammer,amma,amma,P002nb
-A1525nb,amme,ammer,ammet,ammet,P012nb
+A1525nb,amme,ammer,ammet,ammet,P010nb
 A16750nb,forringe,forringer,forringa,forringa,P001nb
 A16750nb,forringe,forringer,forringet,forringet,P010nb
 A43907nb,pakte,pakter,pakta,pakta,P001nb
@@ -7289,7 +7289,7 @@ A56611nb,stalle,staller,stallet,stallet,P010nb
 A65734nb,utskipe,utskiper,utskipa,utskipa,P001nb
 A65734nb,utskipe,utskiper,utskipet,utskipet,P010nb
 A60268nb,temme,temmer,temma,temma,P002nb
-A60268nb,temme,temmer,temmet,temmet,P012nb
+A60268nb,temme,temmer,temmet,temmet,P010nb
 A60268nb,temme,temmer,temte,temt,P022nb
 A478nb,akkumulere,akkumulerer,akkumulerte,akkumulert,P020nb
 A36576nb,magre,magrer,magra,magra,P001nb
@@ -7392,7 +7392,7 @@ A37692nb,mekle,mekler,meklet,meklet,P010nb
 A37692nb,megle,megler,megla,megla,P001nb
 A37692nb,megle,megler,meglet,meglet,P010nb
 A5428nb,berømme,berømmer,berømma,berømma,P002nb
-A5428nb,berømme,berømmer,berømmet,berømmet,P012nb
+A5428nb,berømme,berømmer,berømmet,berømmet,P010nb
 A5428nb,berømme,berømmer,berømte,berømt,P022nb
 A17126nb,fortie,fortier,fortia,fortia,P001nb
 A17126nb,fortie,fortier,fortiet,fortiet,P010nb
@@ -7536,7 +7536,7 @@ A1948nb,anmasse,anmasser,anmassa,anmassa,P001nb
 A1948nb,anmasse,anmasser,anmasset,anmasset,P010nb
 A31682nb,korrigere,korrigerer,korrigerte,korrigert,P020nb
 A34801nb,lemme,lemmer,lemma,lemma,P002nb
-A34801nb,lemme,lemmer,lemmet,lemmet,P012nb
+A34801nb,lemme,lemmer,lemmet,lemmet,P010nb
 A48244nb,resipere,resiperer,resiperte,resipert,P020nb
 A2305nb,anvise,anviser,anviste,anvist,P020nb
 A16091nb,fordype,fordyper,fordypa,fordypa,P001nb
@@ -7551,7 +7551,7 @@ A42570nb,oppmuntre,oppmuntrer,oppmuntret,oppmuntret,P010nb
 A22966nb,hele,heler,hela,hela,P001nb
 A22966nb,hele,heler,helet,helet,P010nb
 A59300nb,sømme,sømmer,sømma,sømma,P002nb
-A59300nb,sømme,sømmer,sømmet,sømmet,P012nb
+A59300nb,sømme,sømmer,sømmet,sømmet,P010nb
 A29849nb,kjøve,kjøver,kjøvde,kjøvd,P030nb
 A61171nb,tjafse,tjafser,tjafsa,tjafsa,P001nb
 A61171nb,tjafse,tjafser,tjafset,tjafset,P010nb
@@ -7572,7 +7572,7 @@ A13189nb,etablere,etablerer,etablerte,etablert,P020nb
 A31756nb,kortslutte,kortslutter,kortslutta,kortslutta,P001nb
 A31756nb,kortslutte,kortslutter,kortsluttet,kortsluttet,P010nb
 A62406nb,tromme,trommer,tromma,tromma,P002nb
-A62406nb,tromme,trommer,trommet,trommet,P012nb
+A62406nb,tromme,trommer,trommet,trommet,P010nb
 A29929nb,klarlegge,klarlegger,klarla,klarlagt,P104nb
 A49437nb,røyklegge,røyklegger,røykla,røyklagt,P104nb
 A49437nb,røklegge,røklegger,røkla,røklagt,P104nb
@@ -7580,7 +7580,7 @@ A10069nb,diffundere,diffunderer,diffunderte,diffundert,P020nb
 A65807nb,utspille,utspiller,utspilte,utspilt,P021nb
 A28626nb,kapitulere,kapitulerer,kapitulerte,kapitulert,P020nb
 A16900nb,forslumme,forslummer,forslumma,forslumma,P002nb
-A16900nb,forslumme,forslummer,forslummet,forslummet,P012nb
+A16900nb,forslumme,forslummer,forslummet,forslummet,P010nb
 A16427nb,forkle,forkler,forkledde,forkledd,P040nb
 A13453nb,evaporere,evaporerer,evaporerte,evaporert,P020nb
 A43054nb,oppslutte,oppslutter,oppslutta,oppslutta,P001nb
@@ -7626,7 +7626,7 @@ A20617nb,grafse,grafser,grafset,grafset,P010nb
 A62520nb,true,truer,trua,trua,P001nb
 A62520nb,true,truer,truet,truet,P010nb
 A16246nb,forfremme,forfremmer,forfremma,forfremma,P002nb
-A16246nb,forfremme,forfremmer,forfremmet,forfremmet,P012nb
+A16246nb,forfremme,forfremmer,forfremmet,forfremmet,P010nb
 A47466nb,rappe,rapper,rappa,rappa,P001nb
 A47466nb,rappe,rapper,rappet,rappet,P010nb
 A3946nb,avvenne,avvenner,avvennet,avvennet,P010nb
@@ -7740,7 +7740,7 @@ A59969nb,tatovere,tatoverer,tatoverte,tatovert,P020nb
 A1770nb,ange,anger,anga,anga,P001nb
 A1770nb,ange,anger,anget,anget,P010nb
 A27494nb,jamme,jammer,jamma,jamma,P002nb
-A27494nb,jamme,jammer,jammet,jammet,P012nb
+A27494nb,jamme,jammer,jammet,jammet,P010nb
 A29888nb,klampe,klamper,klampa,klampa,P001nb
 A29888nb,klampe,klamper,klampet,klampet,P010nb
 A27039nb,intimidere,intimiderer,intimiderte,intimidert,P020nb
@@ -8034,7 +8034,7 @@ A32034nb,krenge,krenger,krengte,krengt,P020nb
 A3776nb,avskipe,avskiper,avskipa,avskipa,P001nb
 A3776nb,avskipe,avskiper,avskipet,avskipet,P010nb
 A56630nb,stamme,stammer,stamma,stamma,P002nb
-A56630nb,stamme,stammer,stammet,stammet,P012nb
+A56630nb,stamme,stammer,stammet,stammet,P010nb
 A48381nb,rettlede,rettleder,rettleda,rettleda,P001nb
 A48381nb,rettlede,rettleder,rettledet,rettledet,P010nb
 A48381nb,rettleie,rettleier,rettleide,rettleid,P030nb
@@ -8335,7 +8335,7 @@ A53949nb,skye,skyer,skyet,skyet,P010nb
 A13966nb,fascinere,fascinerer,fascinerte,fascinert,P020nb
 A13966nb,fasinere,fasinerer,fasinerte,fasinert,P020nb
 A42734nb,ømme,ømmer,ømma,ømma,P002nb
-A42734nb,ømme,ømmer,ømmet,ømmet,P012nb
+A42734nb,ømme,ømmer,ømmet,ømmet,P010nb
 A47953nb,rekke,rekker,rakte,rakt,P109nb
 A68842nb,vitje,vitjer,vitja,vitja,P001nb
 A68842nb,vitje,vitjer,vitjet,vitjet,P010nb
@@ -8658,7 +8658,7 @@ A19812nb,gjennomarbeide,gjennomarbeider,gjennomarbeida,gjennomarbeida,P001nb
 A19812nb,gjennomarbeide,gjennomarbeider,gjennomarbeidet,gjennomarbeidet,P010nb
 A19812nb,gjennomarbeide,gjennomarbeider,gjennomarbeidde,gjennomarbeidd,P030nb
 A42183nb,omrømme,omrømmer,omrømma,omrømma,P002nb
-A42183nb,omrømme,omrømmer,omrømmet,omrømmet,P012nb
+A42183nb,omrømme,omrømmer,omrømmet,omrømmet,P010nb
 A27587nb,jekke,jekker,jekka,jekka,P001nb
 A27587nb,jekke,jekker,jekket,jekket,P010nb
 A22907nb,hekke,hekker,hekka,hekka,P001nb
@@ -8827,7 +8827,7 @@ A26856nb,installere,installerer,installerte,installert,P020nb
 A60588nb,tidfeste,tidfester,tidfesta,tidfesta,P001nb
 A60588nb,tidfeste,tidfester,tidfestet,tidfestet,P010nb
 A16976nb,forstumme,forstummer,forstumma,forstumma,P002nb
-A16976nb,forstumme,forstummer,forstummet,forstummet,P012nb
+A16976nb,forstumme,forstummer,forstummet,forstummet,P010nb
 A48327nb,retirere,retirerer,retirerte,retirert,P020nb
 A43114nb,opptegne,opptegner,opptegna,opptegna,P001nb
 A43114nb,opptegne,opptegner,opptegnet,opptegnet,P010nb
@@ -8837,7 +8837,7 @@ A58119nb,støye,støyer,støya,støya,P001nb
 A58119nb,støye,støyer,støyet,støyet,P010nb
 A58119nb,støye,støyer,støyde,støyd,P030nb
 A33622nb,lamme,lammer,lamma,lamma,P002nb
-A33622nb,lamme,lammer,lammet,lammet,P012nb
+A33622nb,lamme,lammer,lammet,lammet,P010nb
 A17129nb,fortinne,fortinner,fortinna,fortinna,P001nb
 A17129nb,fortinne,fortinner,fortinnet,fortinnet,P010nb
 A32613nb,kule,kuler,kula,kula,P001nb
@@ -9134,7 +9134,7 @@ A4865nb,bedømme,bedømmer,bedømte,bedømt,P022nb
 A60799nb,tilhylle,tilhyller,tilhylla,tilhylla,P001nb
 A60799nb,tilhylle,tilhyller,tilhyllet,tilhyllet,P010nb
 A6935nb,bomme,bommer,bomma,bomma,P002nb
-A6935nb,bomme,bommer,bommet,bommet,P012nb
+A6935nb,bomme,bommer,bommet,bommet,P010nb
 A56112nb,spionere,spionerer,spionerte,spionert,P020nb
 A36137nb,lute,luter,luta,luta,P001nb
 A36137nb,lute,luter,lutet,lutet,P010nb
@@ -9159,7 +9159,7 @@ A3711nb,avpasse,avpasser,avpassa,avpassa,P001nb
 A3711nb,avpasse,avpasser,avpasset,avpasset,P010nb
 A9569nb,deklarere,deklarerer,deklarerte,deklarert,P020nb
 A54375nb,slemme,slemmer,slemma,slemma,P002nb
-A54375nb,slemme,slemmer,slemmet,slemmet,P012nb
+A54375nb,slemme,slemmer,slemmet,slemmet,P010nb
 A32510nb,krøple,krøpler,krøpla,krøpla,P001nb
 A32510nb,krøple,krøpler,krøplet,krøplet,P010nb
 A67087nb,vedrøre,vedrører,vedrørte,vedrørt,P020nb
@@ -9465,7 +9465,7 @@ A45899nb,prale,praler,pralte,pralt,P020nb
 A47591nb,rave,raver,rava,rava,P001nb
 A47591nb,rave,raver,ravet,ravet,P010nb
 A59301nb,sømme,sømmer,sømma,sømma,P002nb
-A59301nb,sømme,sømmer,sømmet,sømmet,P012nb
+A59301nb,sømme,sømmer,sømmet,sømmet,P010nb
 A59301nb,sømme,sømmer,sømte,sømt,P022nb
 A2467nb,arbeide,arbeider,arbeida,arbeida,P001nb
 A2467nb,arbeide,arbeider,arbeidet,arbeidet,P010nb
@@ -9497,7 +9497,7 @@ A48284nb,respirere,respirerer,respirerte,respirert,P020nb
 A29172nb,kidnappe,kidnapper,kidnappa,kidnappa,P001nb
 A29172nb,kidnappe,kidnapper,kidnappet,kidnappet,P010nb
 A58343nb,summe,summer,summa,summa,P002nb
-A58343nb,summe,summer,summet,summet,P012nb
+A58343nb,summe,summer,summet,summet,P010nb
 A15393nb,flikke,flikker,flikka,flikka,P001nb
 A15393nb,flikke,flikker,flikket,flikket,P010nb
 A60920nb,tilskjøte,tilskjøter,tilskjøta,tilskjøta,P001nb
@@ -9534,7 +9534,7 @@ A63551nb,tårne,tårner,tårnet,tårnet,P010nb
 A24160nb,hope,hoper,hopa,hopa,P001nb
 A24160nb,hope,hoper,hopet,hopet,P010nb
 A49365nb,rømme,rømmer,rømma,rømma,P002nb
-A49365nb,rømme,rømmer,rømmet,rømmet,P012nb
+A49365nb,rømme,rømmer,rømmet,rømmet,P010nb
 A100396nb,arbitrere,arbitrerer,arbitrerte,arbitrert,P020nb
 A20111nb,glasere,glaserer,glaserte,glasert,P020nb
 A55800nb,spanke,spanker,spanka,spanka,P001nb
@@ -9560,7 +9560,7 @@ A5679nb,betvile,betviler,betvilte,betvilt,P020nb
 A40827nb,nikke,nikker,nikka,nikka,P001nb
 A40827nb,nikke,nikker,nikket,nikket,P010nb
 A26633nb,innrømme,innrømmer,innrømma,innrømma,P002nb
-A26633nb,innrømme,innrømmer,innrømmet,innrømmet,P012nb
+A26633nb,innrømme,innrømmer,innrømmet,innrømmet,P010nb
 A26633nb,innrømme,innrømmer,innrømte,innrømt,P022nb
 A52533nb,skare,skarer,skara,skara,P001nb
 A52533nb,skare,skarer,skaret,skaret,P010nb
@@ -9697,7 +9697,7 @@ A37247nb,maskinklippe,maskinklipper,maskinklipte,maskinklipt,P021nb
 A19212nb,gasse,gasser,gassa,gassa,P001nb
 A19212nb,gasse,gasser,gasset,gasset,P010nb
 A56629nb,stamme,stammer,stamma,stamma,P002nb
-A56629nb,stamme,stammer,stammet,stammet,P012nb
+A56629nb,stamme,stammer,stammet,stammet,P010nb
 A19950nb,gjeste,gjester,gjesta,gjesta,P001nb
 A19950nb,gjeste,gjester,gjestet,gjestet,P010nb
 A36508nb,magasinere,magasinerer,magasinerte,magasinert,P020nb
@@ -9725,7 +9725,7 @@ A30132nb,klinke,klinker,klinket,klinket,P010nb
 A25nb,abdisere,abdiserer,abdiserte,abdisert,P020nb
 A48198nb,reprodusere,reproduserer,reproduserte,reprodusert,P020nb
 A23147nb,hemme,hemmer,hemma,hemma,P002nb
-A23147nb,hemme,hemmer,hemmet,hemmet,P012nb
+A23147nb,hemme,hemmer,hemmet,hemmet,P010nb
 A43344nb,orke,orker,orka,orka,P001nb
 A43344nb,orke,orker,orket,orket,P010nb
 A26521nb,innkommandere,innkommanderer,innkommanderte,innkommandert,P020nb
@@ -9791,10 +9791,10 @@ A52392nb,skaffe,skaffer,skaffa,skaffa,P001nb
 A52392nb,skaffe,skaffer,skaffet,skaffet,P010nb
 A25936nb,implodere,imploderer,imploderte,implodert,P020nb
 A31918nb,kramme,krammer,kramma,kramma,P002nb
-A31918nb,kramme,krammer,krammet,krammet,P012nb
+A31918nb,kramme,krammer,krammet,krammet,P010nb
 A608nb,aktivisere,aktiviserer,aktiviserte,aktivisert,P020nb
 A16085nb,fordumme,fordummer,fordumma,fordumma,P002nb
-A16085nb,fordumme,fordummer,fordummet,fordummet,P012nb
+A16085nb,fordumme,fordummer,fordummet,fordummet,P010nb
 A48671nb,risle,risler,risla,risla,P001nb
 A48671nb,risle,risler,rislet,rislet,P010nb
 A100058nb,herde,herder,herda,herda,P001nb
@@ -10026,7 +10026,7 @@ A46722nb,prøvefilme,prøvefilmer,prøvefilma,prøvefilma,P001nb
 A46722nb,prøvefilme,prøvefilmer,prøvefilmet,prøvefilmet,P010nb
 A3601nb,avkriminalisere,avkriminaliserer,avkriminaliserte,avkriminalisert,P020nb
 A47368nb,ramme,rammer,ramma,ramma,P002nb
-A47368nb,ramme,rammer,rammet,rammet,P012nb
+A47368nb,ramme,rammer,rammet,rammet,P010nb
 A14756nb,finmale,finmaler,finmalte,finmalt,P020nb
 A4859nb,bedrøve,bedrøver,bedrøva,bedrøva,P001nb
 A4859nb,bedrøve,bedrøver,bedrøvet,bedrøvet,P010nb
@@ -10105,7 +10105,7 @@ A21277nb,gryne,gryner,grynte,grynt,P020nb
 A21775nb,gåre,gårer,gåra,gåra,P001nb
 A21775nb,gåre,gårer,gåret,gåret,P010nb
 A19865nb,gjennomstrømme,gjennomstrømmer,gjennomstrømma,gjennomstrømma,P002nb
-A19865nb,gjennomstrømme,gjennomstrømmer,gjennomstrømmet,gjennomstrømmet,P012nb
+A19865nb,gjennomstrømme,gjennomstrømmer,gjennomstrømmet,gjennomstrømmet,P010nb
 A19865nb,gjennomstrømme,gjennomstrømmer,gjennomstrømte,gjennomstrømt,P022nb
 A33168nb,kverrsette,kverrsetter,kverrsatte,kverrsatt,P106nb
 A45294nb,plotte,plotter,plotta,plotta,P001nb
@@ -10171,7 +10171,7 @@ A56578nb,stage,stager,staga,staga,P001nb
 A56578nb,stage,stager,staget,staget,P010nb
 A40873nb,nitrere,nitrerer,nitrerte,nitrert,P020nb
 A20085nb,glamme,glammer,glamma,glamma,P002nb
-A20085nb,glamme,glammer,glammet,glammet,P012nb
+A20085nb,glamme,glammer,glammet,glammet,P010nb
 A27421nb,jafse,jafser,jafsa,jafsa,P001nb
 A27421nb,jafse,jafser,jafset,jafset,P010nb
 A30692nb,kodifisere,kodifiserer,kodifiserte,kodifisert,P020nb
@@ -10185,7 +10185,7 @@ A50107nb,sangre,sangrer,sangra,sangra,P001nb
 A50107nb,sangre,sangrer,sangret,sangret,P010nb
 A47048nb,påby,påbyr,påbydde,påbydd,P040nb
 A5315nb,beramme,berammer,beramma,beramma,P002nb
-A5315nb,beramme,berammer,berammet,berammet,P012nb
+A5315nb,beramme,berammer,berammet,berammet,P010nb
 A51816nb,sjakle,sjakler,sjakla,sjakla,P001nb
 A51816nb,sjakle,sjakler,sjaklet,sjaklet,P010nb
 A11760nb,egge,egger,egga,egga,P001nb
@@ -10193,7 +10193,7 @@ A11760nb,egge,egger,egget,egget,P010nb
 A7231nb,brakke,brakker,brakka,brakka,P001nb
 A7231nb,brakke,brakker,brakket,brakket,P010nb
 A26612nb,innramme,innrammer,innramma,innramma,P002nb
-A26612nb,innramme,innrammer,innrammet,innrammet,P012nb
+A26612nb,innramme,innrammer,innrammet,innrammet,P010nb
 A10392nb,divertere,diverterer,diverterte,divertert,P020nb
 A60097nb,teknifisere,teknifiserer,teknifiserte,teknifisert,P020nb
 A30382nb,kløyve,kløyver,kløyvde,kløyvd,P030nb
@@ -10236,7 +10236,7 @@ A7483nb,brettsegle,brettsegler,brettsegla,brettsegla,P001nb
 A7483nb,brettsegle,brettsegler,brettseglet,brettseglet,P010nb
 A7483nb,brettseile,brettseiler,brettseilte,brettseilt,P020nb
 A7417nb,bremme,bremmer,bremma,bremma,P002nb
-A7417nb,bremme,bremmer,bremmet,bremmet,P012nb
+A7417nb,bremme,bremmer,bremmet,bremmet,P010nb
 A33418nb,kåre,kårer,kåra,kåra,P001nb
 A33418nb,kåre,kårer,kåret,kåret,P010nb
 A34547nb,løsne,løsner,løsna,løsna,P001nb
@@ -10253,7 +10253,7 @@ A16850nb,forskjønne,forskjønner,forskjønnet,forskjønnet,P010nb
 A69584nb,yngle,yngler,yngla,yngla,P001nb
 A69584nb,yngle,yngler,ynglet,ynglet,P010nb
 A17806nb,fremme,fremmer,fremma,fremma,P002nb
-A17806nb,fremme,fremmer,fremmet,fremmet,P012nb
+A17806nb,fremme,fremmer,fremmet,fremmet,P010nb
 A68576nb,vinsje,vinsjer,vinsja,vinsja,P001nb
 A68576nb,vinsje,vinsjer,vinsjet,vinsjet,P010nb
 A19688nb,gisse,gisser,gissa,gissa,P001nb
@@ -10699,7 +10699,7 @@ A26925nb,intendere,intenderer,intenderte,intendert,P020nb
 A14695nb,finansiere,finansierer,finansierte,finansiert,P020nb
 A64819nb,urgere,urgerer,urgerte,urgert,P020nb
 A57541nb,stramme,strammer,stramma,stramma,P002nb
-A57541nb,stramme,strammer,strammet,strammet,P012nb
+A57541nb,stramme,strammer,strammet,strammet,P010nb
 A6916nb,bombardere,bombarderer,bombarderte,bombardert,P020nb
 A47286nb,raffinere,raffinerer,raffinerte,raffinert,P020nb
 A38703nb,mistro,mistror,mistrodde,mistrodd,P040nb
