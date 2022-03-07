@@ -24,7 +24,7 @@ export default function Test(props) {
         return <div className={styles.container}>
             <main className={styles.main}>
                 <h1>Finished</h1>
-                Correct: {correctNum/2} / {test.numQuestions}
+                Correct: {Math.round(correctNum*50/test.numQuestions)}%
                 <Link href="/">
                     <a  className={styles.card}>
                         <p>Go back</p>
