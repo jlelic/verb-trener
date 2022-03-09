@@ -42,13 +42,21 @@
 .title {
   margin: 0;
   line-height: 1.15;
-  font-size: 4rem;
+  font-size: 3rem;
 }
 
+.verbTitle {
+  line-height: 1.1;
+  font-size: 2rem;
+}
+
+
 .title,
+.verbTitle,
 .description {
   text-align: center;
 }
+
 
 .description {
   margin: 4rem 0;
@@ -130,12 +138,51 @@
   border-color: #0070f3;
 }
 
+.option.disabled:hover,
+.option.disabled:focus,
+.option.disabled {
+  color: darkgrey;
+  border-color: darkgrey;
+}
+
+
 .correct {
   color: #90da1f;
 }
 
 .incorrect {
   color: #f16f48;
+}
+
+.crossOut {
+  text-decoration: line-through;
+  text-decoration-line: spelling-error;
+  text-decoration-color: #ff000077;
+}
+
+.inflectionTable > thead {
+  color: #aaa;
+  text-align: left;
+}
+
+.inflectionTable {
+  min-width: 90%;
+  padding: 5px;
+  /*border: solid 1px #eaeaea;*/
+  border-radius: 10px;
+}
+
+.phaseName {
+  display: inline-block;
+  font-weight: bolder;
+  font-size: 1.1rem;
+}
+
+.smallIcon {
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top:3px;
 }
 
 @media (max-width: 600px) {

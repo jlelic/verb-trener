@@ -6,42 +6,24 @@ import VERBS_CSV from './verbs.csv'
 
 const headers = VERBS_CSV[0]
 const verbs = []
+let lastVerb
 VERBS_CSV.forEach((row,i) => {
     if(i == 0) {
         return
     }
-    const verb = {}
-    headers.forEach((header,j) => {
-        verb[header] = row[j]
-    })
-    verbs.push(verb)
+    const inflections = {id: row[5], forms: [row[2], row[3], row[4]]}
+    const verb = {
+        id: row[0],
+        infinitiv: row[1],
+        inflections: [inflections],
+    }
+    if(!lastVerb || lastVerb.id != verb.id || lastVerb.infinitiv != verb.infinitiv) {
+        verbs.push(verb)
+    } else {
+        lastVerb.inflections.push(inflections)
+    }
+    lastVerb = verb
 })
-let loaded = false
-
-const sleep = ms => new Promise(r => setTimeout(r, ms));
-
-
-
-// const readCsv = async () => {
-//     if(verbs.length > 0) {
-//         return verbs
-//     }
-//     console.log('Starting reading')
-//     return new Promise((resolve, reject) => {
-//         fs.createReadStream('pages/api/verbs.csv')
-//             .pipe(parse({headers: true}))
-//             .on('error', error => {
-//                 console.error(error)
-//                 reject()
-//             })
-//             .on('headers', row => headers = row)
-//             .on('data', row => verbs.push(row))
-//             .on('end', (rowCount) => {
-//                 resolve()
-//                 console.log('Finished reading')
-//             });
-//     })
-// }
 
 const getRandomSubarray = (arr, size) => {
     let shuffled = arr.slice(0), i = arr.length, temp, index;
@@ -53,8 +35,6 @@ const getRandomSubarray = (arr, size) => {
     }
     return shuffled.slice(0, size);
 }
-
-
 
 export async function getVerbs (num) {
     // await readCsv()

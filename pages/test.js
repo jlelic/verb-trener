@@ -1,8 +1,12 @@
+import 'animate.css'
 import styles from '../styles/Home.module.css'
-import {useState} from 'react'
+import {useRef, useState} from 'react'
 import {generateTest} from './api/test-generator'
 import Head from 'next/head'
 import Link from 'next/link'
+import WordSummary from '/compoments/WordSummary'
+import TestSummary from '/compoments/TestSummary'
+import clsx from 'clsx'
 
 export async function getServerSideProps(context) {
     return {
@@ -10,23 +14,46 @@ export async function getServerSideProps(context) {
     }
 }
 
+const PRETERITUM = 'preteritum'
+const PERFEKTUM = 'perfektum'
+const TRANSITION_TIME = 450
+
 export default function Test(props) {
     const {test} = props
     const [questionNum, setQuestionNum] = useState(0)
     const [correctNum, setCorrectNum] = useState(0)
-    const [finished, setFinished] = useState(false)
+    const [showWordSummary, setShowWordSummary] = useState(false)
     const [answered, setAnswered] = useState(false)
-    const [correct, setCorrect] = useState(false)
+    const [answers, setAnswers] = useState([])
     const [isPreteritumPhase, setPreteritumPhase] = useState(true)
-    const phaseName = isPreteritumPhase ? 'preteritum' : 'perfektum'
+    const phaseName = isPreteritumPhase ? PRETERITUM : PERFEKTUM
 
-    if(questionNum == test.numQuestions) {
+    const exitButtonRef = useRef(null)
+
+    const nextQuestion = () => {
+        setShowWordSummary(false)
+        if (!isPreteritumPhase) {
+            setQuestionNum(questionNum + 1)
+        }
+        setAnswered(false)
+        setPreteritumPhase(!isPreteritumPhase)
+    }
+
+    if (questionNum == test.numQuestions) {
+        setTimeout(() => {
+            document.getElementById('exitTextButton').scrollIntoView({
+                behavior: 'smooth'
+            })
+        }, 900)
         return <div className={styles.container}>
             <main className={styles.main}>
                 <h1>Finished</h1>
-                Correct: {Math.round(correctNum*50/test.numQuestions)}%
-                <Link href="/">
-                    <a  className={styles.card}>
+                <TestSummary questions={test.questions} answers={answers}/>
+                <h2>
+                Correct: {Math.round(correctNum * 50 / test.numQuestions)}%
+                </h2>
+                <Link href="/" innerRef={exitButtonRef}>
+                    <a id='exitTextButton' className={styles.card}>
                         <p>Go back</p>
                     </a>
                 </Link>
@@ -39,67 +66,78 @@ export default function Test(props) {
             <title>Verb Test</title>
             <link rel="icon" href="/favicon.ico"/>
         </Head>
+
         <main className={styles.main}>
             <p>
                 {questionNum}/{test.numQuestions}
             </p>
-            <p>
-                What is <strong>{phaseName}</strong> of
-            </p>
-            <h1 className={styles.title}>
-                {test.questions[questionNum].verb.infinitiv}
-            </h1>
-
             {
-                answered && <div>
-                    <br/><br/>
-                    <div className={correct ? styles.correct : styles.incorrect}>
-                        {correct ? 'Correct!' : 'Incorrect!'}
-                    </div>
-                    <br/>
-                    Answer:
-                    <h2 className={correct ? styles.correct : styles.incorrect}>
-                        {test.questions[questionNum].verb[phaseName]}
-                    </h2>
-                </div>
-            }
+                showWordSummary ? <><WordSummary
+                        verb={test.questions[questionNum].verb}
+                        answeredPreteritum={answers[questionNum * 2]}
+                        answeredPerfektum={answers[questionNum * 2 + 1]}
+                    />
+                        <div className={styles.footer}>
+                            <div className={styles.option} onClick={nextQuestion}>
+                                Next
+                            </div>
+                        </div>
+                    </>
+                    :
+                    <>
+                        <div>
+                            What is&nbsp;
+                            <div
+                                id={phaseName + questionNum}
+                                className={clsx(answered || 'animate__animated animate__pulse', styles.phaseName)}
+                            >
+                                {phaseName}
+                            </div>
+                            &nbsp;of
+                        </div>
+                        <h1 className={styles.title}>
+                            {test.questions[questionNum].verb.infinitiv}
+                        </h1>
 
-            <div className={styles.footer}>
-                {
-                    answered ?
-                        <div
-                            className={styles.card}
-                            onClick={() => {
-                                if(!isPreteritumPhase) {
-                                    setQuestionNum(questionNum+1)
+
+                        <div className={styles.footer}>
+
+                            <div className={styles.grid + ' ' + styles.footer}>
+                                {
+                                    test.questions[questionNum][phaseName + 'Options'].map(option =>
+                                        <div
+                                            className={clsx(
+                                                styles.option,
+                                                answered && option.inflection == answers[answers.length-1] && 'animate__animated animate__fadeOut',
+                                                answered && option.inflection != answers[answers.length-1] && 'animate__animated animate__fadeOutRight',
+                                                !answered && 'animate__animated animate__fadeIn',
+                                            )}
+
+                                            onClick={() => {
+                                                if (answered) {
+                                                    return
+                                                }
+                                                setAnswered(true)
+                                                if (option.correct) {
+                                                    setCorrectNum(correctNum + 1)
+                                                }
+                                                setAnswers([...answers, option.inflection])
+                                                window.setTimeout(() => {
+                                                    if (phaseName === PRETERITUM) {
+                                                        nextQuestion()
+                                                    } else {
+                                                        setShowWordSummary(true)
+                                                    }
+                                                }, TRANSITION_TIME)
+                                            }}
+                                            key={option.inflection + phaseName}>
+                                            {option.inflection}
+                                        </div>)
                                 }
-                                setAnswered(false)
-                                setPreteritumPhase(!isPreteritumPhase)
-                            }
-                            }
-                        >
-                            <h2>Next</h2>
-                        </div> :
-                        <div className={styles.grid + ' ' + styles.footer}>
-                            {
-                                test.questions[questionNum][phaseName + 'Options'].map(option =>
-                                    <div
-                                        onClick={() => {
-                                            setCorrect(option.correct)
-                                            setAnswered(true)
-                                            if(option.correct) {
-                                                setCorrectNum(correctNum+1)
-                                            }
-                                        }}
-                                        className={styles.option}
-                                        key={option.inflection}>
-                                        {option.inflection}
-                                    </div>)
-                            }
-                        </div>}
-            </div>
+                            </div>
+                        </div>
+                    </>
+            }
         </main>
-        <div className={styles.footer}>
-        </div>
     </div>
 }

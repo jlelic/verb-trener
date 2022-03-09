@@ -20,7 +20,7 @@ let createInflection = (word, ending, retract, replaceLetter, replaceWith) => {
 }
 
 let preteritum, perfektum, presens
-export default {
+const inflectionGenerators = {
     'P001nb': (infinitiv) => {
         preteritum = createInflection(infinitiv, 'a', 1)
         perfektum = preteritum
@@ -144,3 +144,23 @@ export default {
         return {preteritum, perfektum}
     },
 }
+
+const supportedInflectionIds = Object.keys(inflectionGenerators)
+
+export const generateInflections = (infinitiv) => {
+    const preteritumInflections = new Set()
+    const perfektumInflections = new Set()
+    supportedInflectionIds.forEach(inflId => {
+        const generationFunction = inflectionGenerators[inflId]
+        if(!generationFunction) {
+            console.wait("NOT FOUND FUNCTION FOR", inflId)
+            return
+        }
+        const {preteritum, perfektum} = generationFunction(infinitiv)
+        preteritumInflections.add(preteritum)
+        perfektumInflections.add(perfektum)
+    })
+    return [preteritumInflections,perfektumInflections]
+}
+
+
