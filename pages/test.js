@@ -49,11 +49,11 @@ export default function Test(props) {
             <main className={styles.main}>
                 <h1>Finished</h1>
                 <TestSummary questions={test.questions} answers={answers}/>
-                <h2>
-                Correct: {Math.round(correctNum * 50 / test.numQuestions)}%
+                <h2 className="animate__animated animate__jackInTheBox animate__delay-1s">
+                    Correct: {Math.round(correctNum * 50 / test.numQuestions)}%
                 </h2>
                 <Link href="/" innerRef={exitButtonRef}>
-                    <a id='exitTextButton' className={styles.card}>
+                    <a id="exitTextButton" className={styles.card}>
                         <p>Go back</p>
                     </a>
                 </Link>
@@ -108,8 +108,8 @@ export default function Test(props) {
                                         <div
                                             className={clsx(
                                                 styles.option,
-                                                answered && option.inflection == answers[answers.length-1] && 'animate__animated animate__fadeOut',
-                                                answered && option.inflection != answers[answers.length-1] && 'animate__animated animate__fadeOutRight',
+                                                answered && option.inflection == answers[answers.length - 1] && 'animate__animated animate__fadeOut',
+                                                answered && option.inflection != answers[answers.length - 1] && 'animate__animated animate__fadeOutRight',
                                                 !answered && 'animate__animated animate__fadeIn',
                                             )}
 
