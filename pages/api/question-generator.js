@@ -17,6 +17,7 @@ const generateOptions = (verb, form, inflections) => {
     const correctSet = new Set()
     verb.inflections.forEach(infl => correctSet.add(infl.forms[index]))
     const wrongOptions = [...inflections]
+        .filter(i => i)
         .filter(i => !correctSet.has(i))
         .map(i => ({correct: false, inflection: i}))
     const correctOptions = [...correctSet].map(i=> ({correct: true, inflection: i}))
@@ -29,7 +30,6 @@ const generateOptions = (verb, form, inflections) => {
 }
 
 const generateQuestions = (verbs) => verbs.map((verb) => {
-    const inflId = verb.inflId
     const [preteritumInflections, perfektumInflections] = generateInflections(verb.infinitiv)
 
     const preteritumOptions = generateOptions(verb, 'preteritum', preteritumInflections)

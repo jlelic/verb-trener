@@ -21,21 +21,9 @@ let createInflection = (word, ending, retract, replaceLetter, replaceWith) => {
 
 let preteritum, perfektum, presens
 const inflectionGenerators = {
-    'P001nb': (infinitiv) => {
-        preteritum = createInflection(infinitiv, 'a', 1)
-        perfektum = preteritum
-        return {preteritum, perfektum}
-    },
-    'P003nb': (infinitiv) => {
-        preteritum = createInflection(infinitiv, 'a', 0)
-        perfektum = preteritum
-        return {preteritum, perfektum}
-    },
-    'P010nb': (infinitiv) => {
-        preteritum = createInflection(infinitiv, 't', 0)
-        perfektum = preteritum
-        return {preteritum, perfektum}
-    },
+    'P001nb': (infinitiv) => [['a',1]],
+    'P003nb': (infinitiv) => [['a',0]],
+    'P010nb': (infinitiv) => [['t',0]],
     'P013nb': (infinitiv) => {
         preteritum = infinitiv + 'et'
         perfektum = preteritum
@@ -153,7 +141,7 @@ export const generateInflections = (infinitiv) => {
     supportedInflectionIds.forEach(inflId => {
         const generationFunction = inflectionGenerators[inflId]
         if(!generationFunction) {
-            console.wait("NOT FOUND FUNCTION FOR", inflId)
+            console.warn("NOT FOUND FUNCTION FOR", inflId)
             return
         }
         const {preteritum, perfektum} = generationFunction(infinitiv)

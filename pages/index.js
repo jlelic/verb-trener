@@ -16,12 +16,36 @@ export default function Home() {
 
             <div className={styles.grid}>
                 <div className={styles.card}>
-                <Link href="/test" >
-                    <a>
-                        <h2>Test Preteritum/Perfektum&rarr;</h2>
-                        <p>Quick test of 10 verbs</p>
-                    </a>
-                </Link>
+                    <Link href="/test-beginner">
+                        <a>
+                            <h2>Beginner&rarr;</h2>
+                            <p>Test 20 most common verbs</p>
+                        </a>
+                    </Link>
+                </div>
+                <div className={styles.card}>
+                    <Link href="/test-intermediate">
+                        <a>
+                            <h2>Intermediate&rarr;</h2>
+                            <p>100 most common verbs</p>
+                        </a>
+                    </Link>
+                </div>
+                <div className={styles.card}>
+                    <Link href="/test-advanced">
+                        <a>
+                            <h2>Advanced&rarr;</h2>
+                            <p>1000 most common verbs</p>
+                        </a>
+                    </Link>
+                </div>
+                <div className={styles.card}>
+                    <Link href="/test-intermediate">
+                        <a>
+                            <h2>Expert&rarr;</h2>
+                            <p>All verbs</p>
+                        </a>
+                    </Link>
                 </div>
             </div>
         </main>
