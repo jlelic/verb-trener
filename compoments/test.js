@@ -35,10 +35,6 @@ export default function Test(props) {
         setPreteritumPhase(!isPreteritumPhase)
     }
 
-    const verb = test.questions[questionNum].verb
-    const presens = verb.inflections.sort((a, b) => {
-        (verb.presensCounts[b.forms[0]] || 0) - (verb.presensCounts[a.forms[0]] || 0)
-    })[0].forms[0]
 
     if (questionNum == test.numQuestions) {
         setTimeout(() => {
@@ -61,6 +57,11 @@ export default function Test(props) {
             </main>
         </div>
     }
+
+    const verb = test.questions[questionNum].verb
+    const presens = verb.presensCounts ? verb.inflections.sort((a, b) => {
+        (verb.presensCounts[b.forms[0]] || 0) - (verb.presensCounts[a.forms[0]] || 0)
+    })[0].forms[0] : verb.inflections[0].forms[0]
 
     return <div className={styles.container}>
         <Head>

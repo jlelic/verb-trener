@@ -3,7 +3,7 @@ import Test from '../compoments/test'
 
 export async function getServerSideProps(context) {
     return {
-        props: {test: await generateTest(10, 1000)}, // will be passed to the page component as props
+        props: {test: await generateTest(10)}, // will be passed to the page component as props
     }
 }
 

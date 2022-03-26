@@ -1,3 +1,5 @@
+import {distance} from 'fastest-levenshtein'
+
 const replaceLast = (word, x, y) => {
     y = y || ''
     let index = word.lastIndexOf(x)
@@ -246,7 +248,17 @@ const impossiblePatterns = [
     /kg(d|t)/,
 ]
 
-export const generateInflections = (infinitiv, form) => {
+const cummulativeDistance = (word, solutions) => {
+    let result = 0
+    if(!solutions || !word) {
+        debugger
+    }
+    solutions.forEach(s => result += distance(word, s))
+    return result
+}
+
+export const generateInflections = (verb, form, correctInflections) => {
+    const {infinitiv} = verb
     const index = form === 'preteritum' ? 0 : 1
     const inflections = new Set()
     const firstLetterRegex = new RegExp(infinitiv[0], 'g')
@@ -259,7 +271,7 @@ export const generateInflections = (infinitiv, form) => {
         const generator = generators[index] || generators[0]
         const [ending = '', retract = 0, toReplace = '', replaceWith = ''] = generator
 
-        if(toReplace === infinitiv[0] && infinitiv.match(firstLetterRegex).length === 1) {
+        if (toReplace === infinitiv[0] && infinitiv.match(firstLetterRegex).length === 1) {
             return
         }
 
@@ -272,16 +284,22 @@ export const generateInflections = (infinitiv, form) => {
 
         const inflection = createInflection(infinitiv, ...generator)
 
+        if(!inflection) {
+            return
+        }
+
         for (let pattern of impossiblePatterns) {
             if (inflection.match(pattern)) {
-                console.log(inflection, 'impossible for', pattern)
+                // console.log(inflection, 'impossible for', pattern)
                 return
             }
         }
-        console.log(inflection)
         inflections.add(inflection)
     })
-    return inflections
+    const result = ([...inflections]).sort(
+        (a, b) => cummulativeDistance(a,correctInflections) - cummulativeDistance(b,correctInflections)
+    )
+    return result
 }
 
 

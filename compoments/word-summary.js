@@ -41,19 +41,18 @@ export default function WordSummary(props) {
                     <tr/>
                     <tr className={styles.incorrect}>
                         <td>
-                            <img className={clsx(styles.smallIcon, styles.incorrect)} src="/icons/warning.svg"/>
-                            Your<br/>
-                            Mistake:
                         </td>
                         <td>
-                            {!preteritumCorrect && <span className={styles.crossOut}>
-                            {answeredPreteritum}
+                            {!preteritumCorrect && <span>
+                                {answeredPreteritum}<br/>
+                                <img className={clsx(styles.smallIcon, styles.incorrect)} src="/icons/warning.svg"/> Mistake!
                             </span>
                             }
                         </td>
                         <td>
-                            {!perfektumCorrect && <span className={styles.crossOut}>
-                            {answeredPerfektum}
+                            {!perfektumCorrect && <span>
+                                {answeredPerfektum}<br/>
+                                <img className={clsx(styles.smallIcon, styles.incorrect)} src="/icons/warning.svg"/> Mistake!
                             </span>
                             }
                         </td>
