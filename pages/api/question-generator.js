@@ -1,7 +1,7 @@
 import {generateInflections} from './inflection-generator'
 
 
-const OPTIONS_NUM = 4
+const OPTIONS_NUM = 6
 
 const shuffle = array => array.sort(() => 0.5 - Math.random())
 const pickInflections = (inflId) => [...(shuffle(Object.keys(InflectionGenerator)
@@ -16,10 +16,11 @@ const generateOptions = (verb, form, inflections) => {
     const index = form == 'preteritum' ? 1 : 2
     const correctSet = new Set()
     verb.inflections.forEach(infl => correctSet.add(infl.forms[index]))
-    const wrongOptions = [...inflections]
+    const wrongOptionsInflections = [...inflections]
         .filter(i => i)
         .filter(i => !correctSet.has(i))
-        .map(i => ({correct: false, inflection: i}))
+    const wrongOptions = wrongOptionsInflections.map(i => ({correct: false, inflection: i}))
+
     const correctOptions = [...correctSet].map(i=> ({correct: true, inflection: i}))
     return shuffle(
         [
@@ -30,10 +31,12 @@ const generateOptions = (verb, form, inflections) => {
 }
 
 const generateQuestions = (verbs) => verbs.map((verb) => {
-    const [preteritumInflections, perfektumInflections] = generateInflections(verb.infinitiv)
-
+    const preteritumInflections = generateInflections(verb.infinitiv, 'preteritum')
     const preteritumOptions = generateOptions(verb, 'preteritum', preteritumInflections)
+
+    const perfektumInflections = generateInflections(verb.infinitiv, 'preteritum')
     const perfektumOptions = generateOptions(verb, 'perfektum', perfektumInflections)
+
     return {verb, preteritumOptions, perfektumOptions}
 })
 

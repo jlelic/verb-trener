@@ -94,7 +94,7 @@ export default function Test(props) {
                             >
                                 {phaseName}
                             </div>
-                            &nbsp;of{presens}
+                            &nbsp;of
                         </div>
                         <h1 className={styles.title}>
                             {presens}

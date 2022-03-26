@@ -128,7 +128,7 @@
   transition: color 0.15s ease, border-color 0.15s ease;
   display: inline-block;
   max-width: 300px;
-  min-width: 40%;
+  min-width: 230px;
 }
 
 .option:hover,
@@ -188,6 +188,9 @@
 @media (max-width: 600px) {
   .grid {
     width: 100%;
-    flex-direction: column;
+  }
+
+  .option {
+    min-width: 40%;
   }
 }
