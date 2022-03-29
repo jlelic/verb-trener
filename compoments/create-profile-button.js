@@ -11,6 +11,7 @@ export default function CreateProfileButton(props) {
     const [loading, setLoading] = useState(false)
     const [name, setName] = useState('')
     const [inputError, setInputError] = useState('')
+    const [requestError, setRequesttError] = useState('')
     const [modalIsOpen, setIsOpen] = useState(false)
 
     const nameInputRef = useRef(null)
@@ -41,8 +42,8 @@ export default function CreateProfileButton(props) {
         setName(value)
     }
 
-    const createProfile = () => {
-        if (inputError) {
+    const createProfile = async () => {
+        if (inputError || loading) {
             return
         }
         const data = {
@@ -51,9 +52,12 @@ export default function CreateProfileButton(props) {
         if(testResult) {
             data.result = testResult
         }
-        fetch('/api/profile', {
+        setLoading(true)
+        const result = await fetch('/api/profile', {
             method: 'PUT', body: JSON.stringify(data)
         })
+        setLoading(false)
+        setIsOpen(false)
     }
 
     console.log(modalIsOpen)
@@ -83,7 +87,7 @@ export default function CreateProfileButton(props) {
                 <div className={styles.incorrect}>
                     {inputError}
                 </div>
-                <button className={styles.card} disabled={inputError} onClick={createProfile}>
+                <button className={styles.card} disabled={inputError || loading} onClick={createProfile}>
                     Create {name ? '' : 'anonymous'} profile
                 </button>
             </div>
