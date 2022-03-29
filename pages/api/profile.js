@@ -18,10 +18,10 @@ export default async function index(req, res) {
             ({
                 wordUid: r.uid,
                 user: user.insertedId,
-                consecutive: r.correct ? 1 : 0,
+                consecutive: r.correct == 2 ? 1 : 0,
                 preteritum: r.preteritum,
                 perfektum: r.perfektum,
-                time: getNextTime(r.uid, r.correct ? 1 : 0)
+                time: getNextTime(r.uid, r.correct == 2 ? 1 : 0)
             })
         )
         const words = db.collection('words')
