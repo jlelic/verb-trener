@@ -4,7 +4,6 @@ import React from 'react'
 
 export default function WordSummary(props) {
     const {verb, answeredPreteritum, answeredPerfektum, compact} = props
-    console.log(props)
     const preteritumCorrect = !answeredPreteritum || verb.inflections.some(infl => infl.forms[1] === answeredPreteritum)
     const perfektumCorrect = !answeredPerfektum || verb.inflections.some(infl => infl.forms[2] === answeredPerfektum)
     const answers = [undefined, answeredPreteritum, answeredPerfektum]
@@ -76,9 +75,17 @@ export default function WordSummary(props) {
             {answeredPreteritum &&
                 preteritumCorrect &&
                 answeredPerfektum &&
-                perfektumCorrect && <h3 className={styles.correct}>
-                    Good job!
-                </h3>}
+                perfektumCorrect && <div className={styles.correct}>
+                    <h3>
+                        Good job!
+                    </h3>
+                    {typeof verb.consecutive === 'number' && <p>
+                        {verb.consecutive
+                            ? `You answered this word correctly ${verb.consecutive} times in a row!`
+                            : 'You corrected your mistake from the last time!'
+                        }
+                    </p>}
+                </div>}
         </>
     }
 

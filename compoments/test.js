@@ -1,11 +1,12 @@
 import '../node_modules/animate.css/animate.css'
 import styles from '../styles/Home.module.css'
-import {useRef, useState} from 'react'
+import {useEffect, useRef, useState} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import WordSummary from '/compoments/word-summary'
 import TestSummary from '/compoments/test-summary'
 import clsx from 'clsx'
+import CreateProfileButton from './create-profile-button'
 
 
 const PRETERITUM = 'preteritum'
@@ -13,18 +14,20 @@ const PERFEKTUM = 'perfektum'
 const TRANSITION_TIME = 450
 
 export default function Test(props) {
-    const {test} = props
+    const {test, user} = props
+    console.log(props)
     const [questionNum, setQuestionNum] = useState(0)
     const [correctNum, setCorrectNum] = useState(0)
+    const [correctArray, setCorrectArray] = useState([])
     const [showWordSummary, setShowWordSummary] = useState(false)
     const [answered, setAnswered] = useState(false)
     const [answers, setAnswers] = useState([])
     const [isPreteritumPhase, setPreteritumPhase] = useState(true)
     const phaseName = isPreteritumPhase ? PRETERITUM : PERFEKTUM
 
-    const exitButtonRef = useRef(null)
+    const [dataSent, setDataSend] = useState(false)
 
-    console.log(test)
+    const exitButtonRef = useRef(null)
 
     const nextQuestion = () => {
         setShowWordSummary(false)
@@ -35,13 +38,33 @@ export default function Test(props) {
         setPreteritumPhase(!isPreteritumPhase)
     }
 
+    const testResult = test.questions.map((q, i) => ({
+        uid: q.verb.uid,
+        correct: correctArray[i * 2] + correctArray[i * 2 + 1],
+        preteritum: correctArray[i * 2] ? null : answers[i * 2],
+        perfektum: correctArray[i * 2 + 1] ? null : answers[i * 2 + 1]
+    }))
+
+    useEffect(() => {
+        if (questionNum !== test.numQuestions) {
+            return
+        }
+        if (!dataSent) {
+            setTimeout(() => {
+                document.getElementById('exitTextButton').scrollIntoView({
+                    behavior: 'smooth'
+                })
+            }, 900)
+            setDataSend(true)
+            if (user) {
+                fetch('/api/progress', {
+                    method: 'POST', body: JSON.stringify({result: testResult})
+                })
+            }
+        }
+    }, [questionNum, dataSent])
 
     if (questionNum == test.numQuestions) {
-        setTimeout(() => {
-            document.getElementById('exitTextButton').scrollIntoView({
-                behavior: 'smooth'
-            })
-        }, 900)
         return <div className={styles.container}>
             <main className={styles.main}>
                 <h1>Finished</h1>
@@ -49,6 +72,7 @@ export default function Test(props) {
                 <h2 className="animate__animated animate__jackInTheBox animate__delay-1s">
                     Correct: {Math.round(correctNum * 50 / test.numQuestions)}%
                 </h2>
+                {!user && <CreateProfileButton testResult={testResult}>Save progress</CreateProfileButton>}
                 <Link href="/" innerRef={exitButtonRef}>
                     <a id="exitTextButton" className={styles.card}>
                         <p>Go back</p>
@@ -122,6 +146,9 @@ export default function Test(props) {
                                                 setAnswered(true)
                                                 if (option.correct) {
                                                     setCorrectNum(correctNum + 1)
+                                                    setCorrectArray(correctArray.concat([1]))
+                                                } else {
+                                                    setCorrectArray(correctArray.concat([0]))
                                                 }
                                                 setAnswers([...answers, option.inflection])
                                                 window.setTimeout(() => {

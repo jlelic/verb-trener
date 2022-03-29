@@ -10,12 +10,16 @@
   },
   "dependencies": {
     "animate.css": "^4.1.1",
+    "bson": "^4.6.2",
     "clsx": "^1.1.1",
+    "cookies": "^0.8.0",
     "fast-csv": "^4.3.6",
     "fastest-levenshtein": "^1.0.12",
+    "mongodb": "^4.4.1",
     "next": "12.1.0",
     "react": "17.0.2",
-    "react-dom": "17.0.2"
+    "react-dom": "17.0.2",
+    "react-modal": "^3.14.4"
   },
   "devDependencies": {
     "babel-plugin-inline-react-svg": "^2.0.1",
