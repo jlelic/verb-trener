@@ -2,12 +2,20 @@ import styles from '/styles/Home.module.css'
 import clsx from 'clsx'
 import React from 'react'
 
+const inflectionNames = ['presens', 'preteritum', 'perfektum']
+
 export default function WordSummary(props) {
     const {verb, answeredPreteritum, answeredPerfektum, compact} = props
+    const forms = [0, 1, 2].map(i => [...new Set(
+            verb.inflections.map(infl => infl.forms[i])
+        )].sort((a, b) => (
+                (verb[inflectionNames[i] + 'Counts'] || {})[b] || 0)
+            -
+            (verb[inflectionNames[i] + 'Counts'] || {})[a])
+    )
     const preteritumCorrect = !answeredPreteritum || verb.inflections.some(infl => infl.forms[1] === answeredPreteritum)
     const perfektumCorrect = !answeredPerfektum || verb.inflections.some(infl => infl.forms[2] === answeredPerfektum)
     const answers = [undefined, answeredPreteritum, answeredPerfektum]
-
     const content =
         <>
             <thead>
@@ -24,15 +32,21 @@ export default function WordSummary(props) {
             </tr>
             </thead>
             <tbody>
-            {verb.inflections.map((infl, i) => <tr key={i}>
-                {
-                    infl.forms.map((form, j) => <td key={i + form + j}>
-                        <span className={clsx(form == answers[j] && styles.correct)}>
-                            {(!i || form != verb.inflections[i - 1].forms[j]) && form}
+            {
+                [0, 1, 2, 3].map(i => <tr key={verb.infinitiv + i.toString()}>
+                    {
+                        forms.map((f, j) => {
+                                const form = f[i] || ''
+                                return <td key={i + form + j}>
+                                <span className={clsx(form === answers[j] && styles.correct)}>
+                            {form}
                         </span>
-                    </td>)
-                }
-            </tr>)}
+                                </td>
+                            }
+                        )
+                    }
+                </tr>)
+            }
             {
                 (!preteritumCorrect || !perfektumCorrect) &&
                 <>

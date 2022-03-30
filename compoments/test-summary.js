@@ -1,13 +1,12 @@
 import styles from '/styles/Home.module.css'
 import clsx from 'clsx'
-import React from 'react'
+import React, {Fragment} from 'react'
 import WordSummary from './word-summary'
 
 export default function TestSummary(props) {
     const {questions, answers} = props
     return <table className={styles.inflectionTable}>
-        {questions.map((question, i) => <><WordSummary
-            key={'question ' + i}
+        {questions.map((question, i) => <Fragment key={'question ' + i}><WordSummary
             compact={true}
             verb={question.verb}
             answeredPreteritum={answers[i * 2]}
@@ -18,7 +17,7 @@ export default function TestSummary(props) {
             <tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/>
             <tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/>
             </tbody>
-        </>)
+        </Fragment>)
         }
     </table>
 }

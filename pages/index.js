@@ -67,14 +67,16 @@ export default function Home(props) {
                         </a>
                     </Link>
                 </div>
-                <div className={styles.card}>
-                    <Link href="/review">
-                        <a>
-                            <h2>Review&rarr;</h2>
-                            <p>See mistakes you have done</p>
-                        </a>
-                    </Link>
-                </div>
+                {
+                    user && <div className={styles.card}>
+                        <Link href="/review">
+                            <a>
+                                <h2>Review&rarr;</h2>
+                                <p>See mistakes you have done</p>
+                            </a>
+                        </Link>
+                    </div>
+                }
             </div>
         </main>
 
