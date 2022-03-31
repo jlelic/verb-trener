@@ -96,7 +96,7 @@ export default function WordSummary(props) {
                     </h3>
                     {typeof verb.consecutive === 'number' && <p>
                         {verb.consecutive
-                            ? `You answered this word correctly ${verb.consecutive} times in a row!`
+                            ? `You answered this word correctly ${verb.consecutive+1} times in a row!`
                             : 'You corrected your mistake from the last time!'
                         }
                     </p>}
