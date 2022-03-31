@@ -1,12 +1,13 @@
 import '../node_modules/animate.css/animate.css'
 import styles from '../styles/Home.module.css'
-import {useEffect, useRef, useState} from 'react'
+import React, {useEffect, useRef, useState} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
 import WordSummary from '/compoments/word-summary'
 import TestSummary from '/compoments/test-summary'
 import clsx from 'clsx'
 import CreateProfileButton from './create-profile-button'
+import Header from './header'
 
 
 const PRETERITUM = 'preteritum'
@@ -14,7 +15,7 @@ const PERFEKTUM = 'perfektum'
 const TRANSITION_TIME = 450
 
 export default function Test(props) {
-    const {test, user} = props
+    const { test, user } = props
     console.log(props)
     const [questionNum, setQuestionNum] = useState(0)
     const [correctNum, setCorrectNum] = useState(0)
@@ -58,7 +59,7 @@ export default function Test(props) {
             setDataSend(true)
             if (user) {
                 fetch('/api/progress', {
-                    method: 'POST', body: JSON.stringify({result: testResult})
+                    method: 'POST', body: JSON.stringify({ result: testResult })
                 })
             }
         }
@@ -92,26 +93,20 @@ export default function Test(props) {
             <title>Verb Test</title>
             <link rel="icon" href="/favicon.ico"/>
         </Head>
-
         <main className={styles.main}>
-            <p>
-                {questionNum + 1}/{test.numQuestions}
-            </p>
             {
                 showWordSummary ? <><WordSummary
                         verb={test.questions[questionNum].verb}
                         answeredPreteritum={answers[questionNum * 2]}
                         answeredPerfektum={answers[questionNum * 2 + 1]}
                     />
-                        <div className={styles.footer}>
-                            <div className={styles.option} onClick={nextQuestion}>
+                            <div className={clsx(styles.option,styles.nextButton)} onClick={nextQuestion}>
                                 Next
                             </div>
-                        </div>
                     </>
                     :
                     <>
-                        <div>
+                        <div className={styles.question}>
                             What is&nbsp;
                             <div
                                 id={phaseName + questionNum}
@@ -126,47 +121,63 @@ export default function Test(props) {
                         </h1>
 
 
-                        <div className={styles.footer}>
+                        <div className={styles.optionGrid}>
+                            {
+                                test.questions[questionNum][phaseName + 'Options'].map(option =>
+                                    <div
+                                        className={clsx(
+                                            styles.option,
+                                            answered && option.inflection == answers[answers.length - 1] && 'animate__animated animate__fadeOut',
+                                            answered && option.inflection != answers[answers.length - 1] && 'animate__animated animate__fadeOutRight',
+                                            !answered && 'animate__animated animate__fadeIn',
+                                        )}
 
-                            <div className={styles.grid + ' ' + styles.footer}>
-                                {
-                                    test.questions[questionNum][phaseName + 'Options'].map(option =>
-                                        <div
-                                            className={clsx(
-                                                styles.option,
-                                                answered && option.inflection == answers[answers.length - 1] && 'animate__animated animate__fadeOut',
-                                                answered && option.inflection != answers[answers.length - 1] && 'animate__animated animate__fadeOutRight',
-                                                !answered && 'animate__animated animate__fadeIn',
-                                            )}
-
-                                            onClick={() => {
-                                                if (answered) {
-                                                    return
-                                                }
-                                                setAnswered(true)
-                                                if (option.correct) {
-                                                    setCorrectNum(correctNum + 1)
-                                                    setCorrectArray(correctArray.concat([1]))
+                                        onClick={() => {
+                                            if (answered) {
+                                                return
+                                            }
+                                            setAnswered(true)
+                                            if (option.correct) {
+                                                setCorrectNum(correctNum + 1)
+                                                setCorrectArray(correctArray.concat([1]))
+                                            } else {
+                                                setCorrectArray(correctArray.concat([0]))
+                                            }
+                                            setAnswers([...answers, option.inflection])
+                                            window.setTimeout(() => {
+                                                if (phaseName === PRETERITUM) {
+                                                    nextQuestion()
                                                 } else {
-                                                    setCorrectArray(correctArray.concat([0]))
+                                                    setShowWordSummary(true)
                                                 }
-                                                setAnswers([...answers, option.inflection])
-                                                window.setTimeout(() => {
-                                                    if (phaseName === PRETERITUM) {
-                                                        nextQuestion()
-                                                    } else {
-                                                        setShowWordSummary(true)
-                                                    }
-                                                }, TRANSITION_TIME)
-                                            }}
-                                            key={option.inflection + phaseName}>
-                                            {option.inflection}
-                                        </div>)
-                                }
-                            </div>
+                                            }, TRANSITION_TIME)
+                                        }}
+                                        key={option.inflection + phaseName}>
+                                        {option.inflection}
+                                    </div>)
+                            }
                         </div>
                     </>
             }
         </main>
+        <footer className={styles.footer}>
+            <Link href="/">
+                <div className={styles.exitButton}>
+                    <img
+                        className={clsx(styles.mediumIcon)}
+                        src="/icons/exit.svg"
+                    />
+                </div>
+            </Link>
+            <div>
+                {questionNum + 1}/{test.numQuestions}
+            </div>
+            <div className={clsx(styles.exitButton, styles.hidden)}>
+                <img
+                    className={clsx(styles.mediumIcon)}
+                    src="/icons/exit.svg"
+                />
+            </div>
+        </footer>
     </div>
 }

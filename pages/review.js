@@ -2,7 +2,11 @@ import getLoggedInUser from '/lib/get-logged-in-user'
 import {ObjectID} from 'bson'
 import dbClient from '/lib/mongodb'
 import {generateQuestionsForMistakes} from '../lib/question-generator'
-import TestSummary from '../compoments/test-summary'
+import TestSummary from '/compoments/test-summary'
+import styles from '/styles/Home.module.css'
+import React from 'react'
+import Header from '/compoments/header'
+
 
 export async function getServerSideProps(context) {
     const {req, res} = context
@@ -45,7 +49,13 @@ export default function Review(props) {
         </div>
 
     }
-    return <div>
-        <TestSummary {...reviewTest}/>
+    return <div className={styles.container}>
+        <Header>
+            Your previous mistakes
+        </Header>
+        <main className={styles.main}>
+            <div style={{minHeight: '80px'}}></div>
+            <TestSummary {...reviewTest}/>
+        </main>
     </div>
 }

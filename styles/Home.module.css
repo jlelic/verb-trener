@@ -1,7 +1,37 @@
 .container {
   max-width: 800px;
+  width: 100%;
+  height: 100%;
   margin: auto;
   /*padding: 0 2rem;*/
+}
+
+.footer,
+.header {
+  padding: 10px 0px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+.header {
+  border-bottom: solid 1px darkgrey;
+  position: fixed;
+  width: inherit;
+  max-width: inherit;
+  background: white;
+  z-index: 9000;
+  margin-bottom: 100px;
+}
+
+.footer {
+  border-top: solid 1px darkgrey;
+  position: absolute;
+  bottom: 0px;
+  width: inherit;
+  max-width: inherit;
+  margin-bottom: 2px;
 }
 
 .main {
@@ -10,24 +40,12 @@
   flex: 1;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  height: 100%;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  /*border-top: 1px solid #eaeaea;*/
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.hidden {
+  visibility: hidden;
 }
 
 .title a {
@@ -42,7 +60,7 @@
 }
 
 .title {
-  margin: 0;
+  margin: 24px;
   line-height: 1.15;
   font-size: 3rem;
 }
@@ -55,10 +73,20 @@
 
 .title,
 .verbTitle,
+.pageTitle,
 .description {
   text-align: center;
 }
 
+.question {
+  margin-top: 64px;
+}
+
+.pageTitle {
+  font-weight: bolder;
+  font-size: 1.5rem;
+  margin: 0px;
+}
 
 .description {
   margin: 4rem 0;
@@ -75,12 +103,11 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.grid {
+.optionGrid {
   display: flex;
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  max-width: 800px;
 }
 
 .card {
@@ -188,6 +215,26 @@
   top:3px;
 }
 
+.mediumIcon {
+  pointer-events: none;
+  width: 20px;
+  height: 20px;
+  position: relative;
+  top:3px;
+}
+
+.exitButton {
+  cursor: pointer;
+  transform: scaleX(-1);
+  padding: 0px 16px;
+}
+
+.backButton {
+  cursor: pointer;
+  top: 14px;
+  margin: 0px 0px 0px 4px;
+}
+
 .closeButton {
   cursor: pointer;
   display: inline-block;
@@ -197,8 +244,15 @@
 }
 
 @media (max-width: 600px) {
-  .grid {
+  .optionGrid {
     width: 100%;
+    position: absolute;
+    bottom: 64px;
+  }
+
+  .nextButton {
+    position: absolute;
+    bottom: 194px;
   }
 
   .option {
