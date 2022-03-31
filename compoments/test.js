@@ -134,6 +134,7 @@ export default function Test(props) {
                                     <div
                                         className={clsx(
                                             styles.option,
+                                            option.inflection.length > 10 && styles.longOption,
                                             answered && option.inflection == answers[answers.length - 1] && 'animate__animated animate__fadeOut',
                                             answered && option.inflection != answers[answers.length - 1] && 'animate__animated animate__fadeOutRight',
                                             !answered && 'animate__animated animate__fadeIn',

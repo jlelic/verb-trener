@@ -175,6 +175,10 @@
   box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.1);
 }
 
+.option.longOption {
+  font-size: 1.3em;
+}
+
 .option:hover,
 .option:focus,
 .option:active {
