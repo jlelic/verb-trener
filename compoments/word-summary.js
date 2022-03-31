@@ -90,7 +90,7 @@ export default function WordSummary(props) {
             {answeredPreteritum &&
                 preteritumCorrect &&
                 answeredPerfektum &&
-                perfektumCorrect && <div className={styles.correct}>
+                perfektumCorrect && <div className={clsx(styles.correct, styles.goodJob)}>
                     <h3>
                         Good job!
                     </h3>
