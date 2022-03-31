@@ -9,10 +9,10 @@ import Header from '/compoments/header'
 
 
 export async function getServerSideProps(context) {
-    const {req, res} = context
+    const { req, res } = context
     const user = await getLoggedInUser(req)
     if (!user) {
-        return {props: {}}
+        return { props: {} }
     }
     const userId = ObjectID(user._id)
 
@@ -20,8 +20,8 @@ export async function getServerSideProps(context) {
     const db = client.db('norsk')
     const words = db.collection('words')
     const mistakesCursor = await words.find(
-        {consecutive: 0, user: userId},
-        {limit: 12, sort: 'time'},
+        { consecutive: 0, user: userId },
+        { limit: 12, sort: 'time' },
     )
     const mistakes = await mistakesCursor.toArray()
     const questions = generateQuestionsForMistakes(mistakes)
@@ -42,20 +42,20 @@ export async function getServerSideProps(context) {
 }
 
 export default function Review(props) {
-    const {reviewTest = {}} = props
-    if (!reviewTest || reviewTest.questions.length === 0) {
-        return <div>
-            No mistakes to review!
-        </div>
-
-    }
+    const { reviewTest = {} } = props
     return <div className={styles.container}>
         <Header>
             Your previous mistakes
         </Header>
         <main className={styles.main}>
-            <div style={{minHeight: '80px'}}></div>
-            <TestSummary {...reviewTest}/>
+            <div style={{ minHeight: '80px' }}></div>
+            {(!reviewTest || reviewTest.questions.length === 0) ?
+                <div>
+                    No mistakes to review!
+                </div> :
+                <TestSummary {...reviewTest}/>
+
+            }
         </main>
     </div>
 }

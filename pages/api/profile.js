@@ -13,7 +13,7 @@ export default async function index(req, res) {
         const { name, result } = JSON.parse(req.body)
         const fullName = name.length > 0 ? `${name}-${Math.floor(Math.random() * 100).toString().padStart(2, '0')}` : (~~(Math.random() * 10000)).toString().padStart(4, '0')
         const user = await users.insertOne(
-            { name, fullName }
+            { name, fullName, time: (new Date()).toString() }
         )
 
         const wordsToInsert = result.map(r =>
