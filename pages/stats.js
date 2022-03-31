@@ -63,7 +63,7 @@ export default function Review(props) {
     const { user, stats } = props
     return <div className={styles.container}>
         <Header>
-            {user.name || user.fullName}'s Stats
+            {user.name || user.fullName}&apos;s Stats
         </Header>
         <div style={{ minHeight: '80px' }}></div>
         <main className={styles.main}>
