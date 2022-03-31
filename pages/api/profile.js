@@ -1,6 +1,8 @@
 import Cookies from 'cookies'
 import dbClient from '/lib/mongodb'
-import {getNextTime} from '../../lib/spacial-repetiton'
+import {getNextTime} from '/lib/spacial-repetiton'
+
+const cookieExpireDate = new Date('2038-01-19')
 
 export default async function index(req, res) {
     if (req.method === 'PUT') {
@@ -8,10 +10,10 @@ export default async function index(req, res) {
         const cookies = new Cookies(req, res)
         const db = client.db('norsk')
         const users = db.collection('users')
-        const {name, result} = JSON.parse(req.body)
+        const { name, result } = JSON.parse(req.body)
         const fullName = name.length > 0 ? `${name}-${Math.floor(Math.random() * 100).toString().padStart(2, '0')}` : (Math.random() * 10000).toString().padStart(4, '0')
         const user = await users.insertOne(
-            {name, fullName}
+            { name, fullName }
         )
 
         const wordsToInsert = result.map(r =>
@@ -33,8 +35,8 @@ export default async function index(req, res) {
         })
 
 
-        cookies.set('sid', sessionRecord.insertedId, {expires: false})
-        res.json({ok: true, name, fullName})
+        cookies.set('sid', sessionRecord.insertedId, { expires: cookieExpireDate })
+        res.json({ ok: true, name, fullName })
     } else {
 
     }
