@@ -73,7 +73,7 @@ export default function Review(props) {
                     <th></th>
                     <th>Seen</th>
                     <th>Correct</th>
-                    <th>3x Correct</th>
+                    <th>3 in a rowk</th>
                 </tr>
                 </thead>
                 <tbody>
