@@ -100,8 +100,8 @@ export default function CreateProfileButton(props) {
                     Something went wrong
                     {requestError}
                 </div>}
-                <div className={clsx({ [menuStyles.item]: true, [styles.disabled]: inputError || loading })}
-                     style={{textAlign: 'center', maxWidth:300}}
+                <div className={clsx({ [menuStyles.item]: true, [menuStyles.disabled]: inputError || loading })}
+                     style={{textAlign: 'center', minWidth:210, width: 200}}
                      onClick={createProfile}>
                     {loading
                         ? <div className={menuStyles.title}>

@@ -10,6 +10,7 @@ import clsx from 'clsx'
 import CreateProfileButton from './create-profile-button'
 import Header from './header'
 import MenuItem from './menu-item'
+import StatPercentage from './stat-percentage'
 
 
 const PRETERITUM = 'preteritum'
@@ -79,7 +80,7 @@ export default function Test(props) {
                 <h1>Finished</h1>
                 <TestSummary questions={test.questions} answers={answers}/>
                 <h2 className="animate__animated animate__jackInTheBox animate__delay-1s">
-                    Correct: {Math.round(correctNum * 50 / test.numQuestions)}%
+                    Correct: <StatPercentage value={correctNum * 0.5 / test.numQuestions}/>
                 </h2>
                 {createdProfile && <p className={styles.correct}>Created profile {createdProfile.fullName}!</p>}
                 <div className={menuStyles.group} id='exitTextButton'>

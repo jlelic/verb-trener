@@ -3,9 +3,10 @@ import Test from '/compoments/test'
 import getLoggedInUser from '../../lib/get-logged-in-user'
 
 const testTypes = {
-    beginner: [10, 20],
-    advanced: [10, 100],
-    intermediate: [10, 1000],
+    basic: [10, 20],
+    beginner: [10, 100],
+    intermediate: [10, 500],
+    advanced: [10, 1000],
     expert: [10, null],
 }
 

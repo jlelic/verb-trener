@@ -34,8 +34,9 @@ export default function Home(props) {
                     <div className={menuStyles.groupName}>
                         PRACTICE
                     </div>
-                    <MenuItem link="/test/beginner" title="Basic" description="20 most common verbs"/>
-                    <MenuItem link="/test/intermediate" title="Intermediate" description="100 most common verbs"/>
+                    <MenuItem link="/test/basic" title="Basic" description="20 most common verbs"/>
+                    <MenuItem link="/test/beginner" title="Beginner" description="100 most common verbs"/>
+                    <MenuItem link="/test/intermediate" title="Intermediate" description="500 most common verbs"/>
                     <MenuItem link="/test/advanced" title="Advanced" description="1000 most common verbs"/>
                     <MenuItem link="/test/expert" title="Expert" description="All the verbs"/>
                 </div>
@@ -44,10 +45,15 @@ export default function Home(props) {
                         <div className={menuStyles.groupName}>
                             REVIEW
                         </div>
-                        <MenuItem link="/review" title="Mistakes" description="See the mistakes you have done"/>
+                        <MenuItem link="/review" title="Mistakes" description="Check the mistakes you have done"/>
+                        <MenuItem link="/stats" title="Your stats" description="See how many verbs you know"/>
                     </div>
                 }
             </div>
+            <div className={styles.authorSpace}/>
         </main>
+        <footer className={styles.author}>
+            by joseph.lelic@gmail.com
+        </footer>
     </div>)
 }

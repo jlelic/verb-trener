@@ -45,10 +45,15 @@
   color: #ff411f;
   border-color: #ffae76;
 }
-.item:hover {
-  /*color: #f16f48;*/
+
+.item.disabled:hover {
+  color: darkgrey;
+  background-color: #d2d2d2;
 }
 
+.disabled .title {
+  color: #aaaaaa;
+}
 
 .arrow, .save {
   position: absolute;
