@@ -1,13 +1,16 @@
 import Head from 'next/head'
 import Link from 'next/link'
 import styles from '../styles/Home.module.css'
+import menuStyles from '../styles/Menu.module.css'
 import getLoggedInUser from '../lib/get-logged-in-user'
+import Background from '../compoments/background'
+import MenuItem from '../compoments/menu-item'
 
 export async function getServerSideProps(context) {
-    const {req, res} = context
+    const { req, res } = context
     const user = await getLoggedInUser(req)
     if (!user) {
-        return {props: {}}
+        return { props: {} }
     }
     return {
         props: {
@@ -17,64 +20,34 @@ export async function getServerSideProps(context) {
 }
 
 export default function Home(props) {
-    const {user} = props
+    const { user } = props
     return (<div className={styles.container}>
-        <Head>
-            <title>Create Next App</title>
-            <link rel="icon" href="/favicon.ico"/>
-        </Head>
-
         <main className={styles.main}>
             <h1 className={styles.title}>
                 Verb Trener
             </h1>
             {
-                user && <p>
-                    Welcome {user.name}
-                </p>
+                user ? <p>
+                    Welcome {user.name || `#${user.fullName}`}
+                </p> : <div style={{height:30}} />
             }
 
-            <div className={''}>
-                <div className={styles.card}>
-                    <Link href="/test/beginner">
-                        <a>
-                            <h2>Beginner&rarr;</h2>
-                            <p>Test 20 most common verbs</p>
-                        </a>
-                    </Link>
+            <div className={menuStyles.menu}>
+                <div className={menuStyles.group}>
+                    <div className={menuStyles.groupName}>
+                        PRACTICE
+                    </div>
+                    <MenuItem link="/test/beginner" title="Basic" description="20 most common verbs"/>
+                    <MenuItem link="/test/intermediate" title="Intermediate" description="100 most common verbs"/>
+                    <MenuItem link="/test/advanced" title="Advanced" description="1000 most common verbs"/>
+                    <MenuItem link="/test/expert" title="Expert" description="All the verbs"/>
                 </div>
-                <div className={styles.card}>
-                    <Link href="/test/intermediate">
-                        <a>
-                            <h2>Intermediate&rarr;</h2>
-                            <p>100 most common verbs</p>
-                        </a>
-                    </Link>
-                </div>
-                <div className={styles.card}>
-                    <Link href="/test/advanced">
-                        <a>
-                            <h2>Advanced&rarr;</h2>
-                            <p>1000 most common verbs</p>
-                        </a>
-                    </Link>
-                </div>
-                <div className={styles.card}>
-                    <Link href="/test/intermediate">
-                        <a>
-                            <h2>Expert&rarr;</h2>
-                            <p>All verbs</p>
-                        </a>
-                    </Link>
-                </div>
-                {
-                    user && <div className={styles.card}>
-                        <Link href="/review">
-                            <a>
-                                <h2>Review&rarr;</h2>
-                                <p>See mistakes you have done</p>
-                            </a>
-                        </Link>
+                {user &&
+                    <div className={menuStyles.group}>
+                        <div className={menuStyles.groupName}>
+                            REVIEW
+                        </div>
+                        <MenuItem link="/review" title="Mistakes" description="See the mistakes you have done"/>
                     </div>
                 }
             </div>

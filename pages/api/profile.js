@@ -11,7 +11,7 @@ export default async function index(req, res) {
         const db = client.db('norsk')
         const users = db.collection('users')
         const { name, result } = JSON.parse(req.body)
-        const fullName = name.length > 0 ? `${name}-${Math.floor(Math.random() * 100).toString().padStart(2, '0')}` : (Math.random() * 10000).toString().padStart(4, '0')
+        const fullName = name.length > 0 ? `${name}-${Math.floor(Math.random() * 100).toString().padStart(2, '0')}` : (~~(Math.random() * 10000)).toString().padStart(4, '0')
         const user = await users.insertOne(
             { name, fullName }
         )

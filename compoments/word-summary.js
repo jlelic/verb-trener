@@ -1,11 +1,12 @@
 import styles from '/styles/Home.module.css'
+import tableStyles from '/styles/Table.module.css'
 import clsx from 'clsx'
 import React from 'react'
 
 const inflectionNames = ['presens', 'preteritum', 'perfektum']
 
 export default function WordSummary(props) {
-    const {verb, answeredPreteritum, answeredPerfektum, compact} = props
+    const { verb, answeredPreteritum, answeredPerfektum, compact } = props
     const forms = [0, 1, 2].map(i => [...new Set(
             verb.inflections.map(infl => infl.forms[i])
         )].sort((a, b) => (
@@ -20,13 +21,13 @@ export default function WordSummary(props) {
         <>
             <thead>
             <tr>
-                <th>
+                <th className={tableStyles.header}>
                     {compact ? verb.infinitiv : 'Presens'}
                 </th>
-                <th>
+                <th className={tableStyles.header}>
                     {!compact && 'Preteritum'}
                 </th>
-                <th>
+                <th className={tableStyles.header}>
                     {!compact && 'Perfektum'}
                 </th>
             </tr>
@@ -37,7 +38,7 @@ export default function WordSummary(props) {
                     {
                         forms.map((f, j) => {
                                 const form = f[i] || ''
-                                return <td key={i + form + j}>
+                                return <td key={i + form + j} className={tableStyles.cell}>
                                 <span className={clsx(form === answers[j] && styles.correct)}>
                             {form}
                         </span>
@@ -50,22 +51,22 @@ export default function WordSummary(props) {
             {
                 (!preteritumCorrect || !perfektumCorrect) &&
                 <>
-                    <tr/>
-                    <tr/>
                     <tr className={styles.incorrect}>
                         <td>
                         </td>
                         <td>
                             {!preteritumCorrect && <span>
-                                {answeredPreteritum}<br/>
-                                <img className={clsx(styles.smallIcon, styles.incorrect)} src="/icons/warning.svg"/> Mistake!
+                                {answeredPreteritum} &nbsp;
+                                <img className={clsx(styles.smallIcon, styles.incorrect)} src="/icons/warning.svg"/><br/>
+                                {!compact && 'Mistake!'}
                             </span>
                             }
                         </td>
                         <td>
                             {!perfektumCorrect && <span>
-                                {answeredPerfektum}<br/>
-                                <img className={clsx(styles.smallIcon, styles.incorrect)} src="/icons/warning.svg"/> Mistake!
+                                {answeredPerfektum}
+                                <img className={clsx(styles.smallIcon, styles.incorrect)} src="/icons/warning.svg"/> <br/>
+                                {!compact && 'Mistake!'}
                             </span>
                             }
                         </td>
@@ -82,7 +83,7 @@ export default function WordSummary(props) {
             <h2 className={styles.verbTitle}>
                 {verb.infinitiv}
             </h2>
-            <table className={styles.inflectionTable}>
+            <table className={tableStyles.inflectionTable}>
                 {content}
             </table>
             <br/><br/><br/><br/>

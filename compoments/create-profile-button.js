@@ -2,16 +2,19 @@ import styles from '../styles/Home.module.css'
 import {useRef, useState} from 'react'
 import Modal from 'react-modal'
 import clsx from 'clsx'
+import MenuItem from './menu-item'
+import menuStyles from '../styles/Menu.module.css'
+import Link from 'next/link'
 
 Modal.setAppElement('#__next')
 
 export default function CreateProfileButton(props) {
-    const {testResult} = props
+    const { testResult } = props
     console.log(testResult)
     const [loading, setLoading] = useState(false)
     const [name, setName] = useState('')
     const [inputError, setInputError] = useState('')
-    const [requestError, setRequesttError] = useState('')
+    const [requestError, setRequestError] = useState('')
     const [modalIsOpen, setIsOpen] = useState(false)
 
     const nameInputRef = useRef(null)
@@ -49,7 +52,7 @@ export default function CreateProfileButton(props) {
         const data = {
             name
         }
-        if(testResult) {
+        if (testResult) {
             data.result = testResult
         }
         setLoading(true)
@@ -57,12 +60,18 @@ export default function CreateProfileButton(props) {
             method: 'PUT', body: JSON.stringify(data)
         })
         setLoading(false)
-        setIsOpen(false)
+        if (result.ok) {
+            setIsOpen(false)
+            const createdProfile = await result.json()
+            props.onProfileCreated(createdProfile)
+
+        } else {
+            setRequestError(result.statusText || 'Unknown error')
+        }
     }
 
-    console.log(modalIsOpen)
 
-    return <div className={styles.card} onClick={openModal}>
+    return <div className={clsx(menuStyles.item)} onClick={openModal}>
         <Modal
             isOpen={modalIsOpen}
             onAfterOpen={afterOpenModal}
@@ -87,12 +96,31 @@ export default function CreateProfileButton(props) {
                 <div className={styles.incorrect}>
                     {inputError}
                 </div>
-                <button className={styles.card} disabled={inputError || loading} onClick={createProfile}>
-                    Create {name ? '' : 'anonymous'} profile
-                </button>
+                {requestError && <div className={styles.incorrect}>
+                    Something went wrong
+                    {requestError}
+                </div>}
+                <div className={clsx({ [menuStyles.item]: true, [styles.disabled]: inputError || loading })}
+                     style={{textAlign: 'center', maxWidth:300}}
+                     onClick={createProfile}>
+                    {loading
+                        ? <div className={menuStyles.title}>
+                            <svg className="svg-container" height="20" width="20" viewBox="0 0 100 100">
+                                <circle className={clsx(styles.loaderSvg, styles.animate)} cx="50" cy="50"
+                                        r="45"></circle>
+                            </svg>
+                            Wait
+                        </div>
+                        :
+                        <div className={menuStyles.title}>
+                            Create {name ? '' : 'anonymous'} profile
+                        </div>
+                    }
+                </div>
             </div>
         </Modal>
-        <p>Save progress</p>
+        <div className={menuStyles.title}>Save progress</div>
+        <div className={menuStyles.save}></div>
     </div>
 
 }

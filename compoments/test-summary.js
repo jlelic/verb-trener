@@ -2,10 +2,11 @@ import styles from '/styles/Home.module.css'
 import clsx from 'clsx'
 import React, {Fragment} from 'react'
 import WordSummary from './word-summary'
+import tableStyles from '/styles/Table.module.css'
 
 export default function TestSummary(props) {
     const {questions, answers} = props
-    return <table className={styles.inflectionTable}>
+    return <table className={tableStyles.inflectionTable}>
         {questions.map((question, i) => <Fragment key={'question ' + i}><WordSummary
             compact={true}
             verb={question.verb}
@@ -13,9 +14,15 @@ export default function TestSummary(props) {
             answeredPerfektum={answers[i * 2 + 1]}
         />
             <tbody>
-            <tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/>
-            <tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/>
-            <tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/><tr/>
+            <tr>
+                <td className={tableStyles.space}></td>
+            </tr>
+            <tr>
+                <td className={clsx(tableStyles.lineRow)} colSpan={3}> </td>
+            </tr>
+            <tr>
+                <td className={tableStyles.space}></td>
+            </tr>
             </tbody>
         </Fragment>)
         }

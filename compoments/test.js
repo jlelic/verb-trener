@@ -1,5 +1,6 @@
 import '../node_modules/animate.css/animate.css'
-import styles from '../styles/Home.module.css'
+import styles from '/styles/Home.module.css'
+import menuStyles from '/styles/Menu.module.css'
 import React, {useEffect, useRef, useState} from 'react'
 import Head from 'next/head'
 import Link from 'next/link'
@@ -8,6 +9,7 @@ import TestSummary from '/compoments/test-summary'
 import clsx from 'clsx'
 import CreateProfileButton from './create-profile-button'
 import Header from './header'
+import MenuItem from './menu-item'
 
 
 const PRETERITUM = 'preteritum'
@@ -29,6 +31,12 @@ export default function Test(props) {
     const [dataSent, setDataSend] = useState(false)
 
     const exitButtonRef = useRef(null)
+
+    const [createdProfile, setCreatedProfile] = useState(null)
+    const onProfileCreated = (profile) => {
+        console.log(profile)
+        setCreatedProfile(profile)
+    }
 
     const nextQuestion = () => {
         setShowWordSummary(false)
@@ -73,12 +81,11 @@ export default function Test(props) {
                 <h2 className="animate__animated animate__jackInTheBox animate__delay-1s">
                     Correct: {Math.round(correctNum * 50 / test.numQuestions)}%
                 </h2>
-                {!user && <CreateProfileButton testResult={testResult}>Save progress</CreateProfileButton>}
-                <Link href="/" innerRef={exitButtonRef}>
-                    <a id="exitTextButton" className={styles.card}>
-                        <p>Go back</p>
-                    </a>
-                </Link>
+                {createdProfile && <p className={styles.correct}>Created profile {createdProfile.fullName}!</p>}
+                <div className={menuStyles.group}>
+                {!user && !createdProfile && <CreateProfileButton testResult={testResult} onProfileCreated={onProfileCreated}>Save progress</CreateProfileButton>}
+                <MenuItem  innerRef={exitButtonRef} link='/' title='Return to menu'/>
+                </div>
             </main>
         </div>
     }
@@ -116,7 +123,7 @@ export default function Test(props) {
                             </div>
                             &nbsp;of
                         </div>
-                        <h1 className={styles.title}>
+                        <h1 className={styles.verbTitle}>
                             {presens}
                         </h1>
 
