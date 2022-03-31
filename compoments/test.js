@@ -82,9 +82,9 @@ export default function Test(props) {
                     Correct: {Math.round(correctNum * 50 / test.numQuestions)}%
                 </h2>
                 {createdProfile && <p className={styles.correct}>Created profile {createdProfile.fullName}!</p>}
-                <div className={menuStyles.group}>
+                <div className={menuStyles.group} id='exitTextButton'>
                 {!user && !createdProfile && <CreateProfileButton testResult={testResult} onProfileCreated={onProfileCreated}>Save progress</CreateProfileButton>}
-                <MenuItem  innerRef={exitButtonRef} link='/' title='Return to menu'/>
+                <MenuItem innerRef={exitButtonRef} link='/' title='Return to menu'/>
                 </div>
             </main>
         </div>

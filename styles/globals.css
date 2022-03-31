@@ -26,6 +26,10 @@ body {
   background-repeat: no-repeat;
 }
 
+div, img {
+  -webkit-tap-highlight-color: transparent;
+}
+
 .background {
   height: 100vh;
   width: 100vw;

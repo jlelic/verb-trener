@@ -6,6 +6,7 @@ import TestSummary from '/compoments/test-summary'
 import styles from '/styles/Home.module.css'
 import React from 'react'
 import Header from '/compoments/header'
+import MenuItem from '../compoments/menu-item'
 
 
 export async function getServerSideProps(context) {
@@ -21,7 +22,7 @@ export async function getServerSideProps(context) {
     const words = db.collection('words')
     const mistakesCursor = await words.find(
         { consecutive: 0, user: userId },
-        { limit: 12, sort: 'time' },
+        { limit: 12, sort: 'wordUid' },
     )
     const mistakes = await mistakesCursor.toArray()
     const questions = generateQuestionsForMistakes(mistakes)
@@ -53,8 +54,10 @@ export default function Review(props) {
                 <div>
                     No mistakes to review!
                 </div> :
-                <TestSummary {...reviewTest}/>
-
+                <>
+                    <TestSummary {...reviewTest}/>
+                    <MenuItem title='Review test' description='Practice with your mistakes' link='/test/review'/>
+                </>
             }
         </main>
     </div>

@@ -4,7 +4,7 @@ export default function Document() {
     return (
         <Html>
             <Head>
-                <title>Lære norsk preteritum of perfektum - Verb Trener</title>
+                <title>Lære norsk verbbøying - Verb Trener</title>
                 <link rel="icon" href="/favicon.ico"/>
 
                 <link rel="preconnect" href="https://fonts.googleapis.com"/>

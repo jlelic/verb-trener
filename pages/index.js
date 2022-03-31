@@ -1,9 +1,6 @@
-import Head from 'next/head'
-import Link from 'next/link'
 import styles from '../styles/Home.module.css'
 import menuStyles from '../styles/Menu.module.css'
 import getLoggedInUser from '../lib/get-logged-in-user'
-import Background from '../compoments/background'
 import MenuItem from '../compoments/menu-item'
 
 export async function getServerSideProps(context) {
@@ -29,7 +26,7 @@ export default function Home(props) {
             {
                 user ? <p>
                     Welcome {user.name || `#${user.fullName}`}
-                </p> : <div style={{height:30}} />
+                </p> : <p>Lære norsk verbbøying! </p>
             }
 
             <div className={menuStyles.menu}>
