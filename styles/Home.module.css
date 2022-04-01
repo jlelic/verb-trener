@@ -229,6 +229,10 @@
   text-decoration-color: #ff000077;
 }
 
+.nextButton {
+  margin-bottom: 48px;
+}
+
 .phaseName {
   color: #16438a;
   display: inline-block;
@@ -264,6 +268,19 @@
   margin: 0px 0px 0px 4px;
 }
 
+.ordbokLink {
+  font-size: 1.1rem;
+  color: #560027;
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  transition: color 0.15s ease;
+}
+
+.ordbokLink:hover,
+.ordbokLink:focus {
+  color: #bb6087;
+}
+
 .closeButton {
   cursor: pointer;
   display: inline-block;
@@ -285,7 +302,12 @@
 
   .nextButton {
     position: absolute;
-    bottom: 194px;
+    bottom: 180px;
+  }
+
+  .lookOrdbok {
+    position: absolute;
+    bottom: 128px;
   }
 
   .option {

@@ -83,9 +83,11 @@ export default function Test(props) {
                     Correct: <StatPercentage value={correctNum * 0.5 / test.numQuestions}/>
                 </h2>
                 {createdProfile && <p className={styles.correct}>Created profile {createdProfile.fullName}!</p>}
-                <div className={menuStyles.group} id='exitTextButton'>
-                {!user && !createdProfile && <CreateProfileButton testResult={testResult} onProfileCreated={onProfileCreated}>Save progress</CreateProfileButton>}
-                <MenuItem innerRef={exitButtonRef} link='/' title='Return to menu'/>
+                <div className={menuStyles.group} id="exitTextButton">
+                    {!user && !createdProfile &&
+                        <CreateProfileButton testResult={testResult} onProfileCreated={onProfileCreated}>Save
+                            progress</CreateProfileButton>}
+                    <MenuItem innerRef={exitButtonRef} link="/" title="Return to menu"/>
                 </div>
             </main>
         </div>
@@ -108,9 +110,19 @@ export default function Test(props) {
                         answeredPreteritum={answers[questionNum * 2]}
                         answeredPerfektum={answers[questionNum * 2 + 1]}
                     />
-                            <div className={clsx(styles.option,styles.nextButton)} onClick={nextQuestion}>
-                                Next
-                            </div>
+                        <div className={clsx(styles.option, styles.nextButton)} onClick={nextQuestion}>
+                            Next
+                        </div>
+                        <div className={styles.lookOrdbok}>
+                            Look up in&nbsp;
+                            <a
+                                className={styles.ordbokLink}
+                                target={'_blank'}
+                                href={`https://ordbokene.no/bm/${verb.id.slice(1, -2)}/${verb.infinitiv}`}
+                            >
+                                 Ordbok
+                            </a>
+                        </div>
                     </>
                     :
                     <>

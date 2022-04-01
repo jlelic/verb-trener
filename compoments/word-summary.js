@@ -86,7 +86,7 @@ export default function WordSummary(props) {
             <table className={tableStyles.inflectionTable}>
                 {content}
             </table>
-            <br/><br/><br/><br/>
+            <br/><br/>
             {answeredPreteritum &&
                 preteritumCorrect &&
                 answeredPerfektum &&
